@@ -1,0 +1,864 @@
+,DOCENTE,UNIDADE,CARGO,VINCULO,STATUS,Nota_RAD,Ensino,Pesquisa,Extensão,Gestão
+0,1,Garanhuns,Professor Adjunto,Em Exercício,Validada,109.83,40.77,28.35,2.58,38.13
+2,3,Petrolina,Professor Adjunto,Em Exercício,Validada,48.84,31.21,15.55,2.08,0.0
+3,4,Garanhuns,Professor Assistente,Em Exercício,Validada,70.79,12.3,2.83,3.15,52.51
+4,5,ESEF,Professor Adjunto,Em Exercício,Validada,70.02,20.19,2.83,5.49,41.51
+5,6,Reitoria,Professor Adjunto,Em Exercício,Validada,257.76,69.29,89.95,20.89,77.63
+6,7,Mata Norte,Professor Adjunto,Em Exercício,Validada,70.64,37.38,30.22,1.06,1.98
+7,8,ICB,Professor Assistente,Em Exercício,Validada,0.0,18.27,0.0,0.0,0.0
+8,9,Garanhuns,Professor Adjunto,Em Exercício,Validada,31.62,20.68,10.94,0.0,0.0
+9,10,Mata Norte,Professor Associado,Em Exercício,Validada,275.04,92.48,117.41,12.42,52.73
+11,12,FENSG,Professor Associado,Em Exercício,Validada,444.19,198.84,89.3,57.43,98.62
+12,13,ESEF,Professor Adjunto,Em Exercício,Validada,130.91,56.06,45.12,13.02,16.71
+13,14,Caruaru,Professor Adjunto,Em Exercício,Validada,157.2,66.83,25.64,4.63,60.1
+14,15,FOP,Professor Adjunto,Em Exercício,Validada,135.64,63.53,25.87,45.17,1.07
+15,16,FCM,Professor Adjunto,Em Exercício,Validada,182.79,102.53,51.99,15.1,13.17
+16,17,Arcoverde,Professor Adjunto,Em Exercício,Validada,55.3,38.29,6.92,0.0,10.09
+17,18,ESEF,Professor Adjunto,Em Exercício,Validada,53.67,42.51,0.0,0.0,11.16
+18,19,POLI,Professor Associado,Em Exercício,Validada,243.81,62.24,80.61,36.68,64.28
+19,20,POLI,Professor Adjunto,Em Exercício,Validada,67.76,48.85,16.25,1.59,1.07
+20,21,Petrolina,Professor Adjunto,Em Exercício,Validada,222.08,142.01,36.63,3.39,40.05
+21,22,Garanhuns,Professor Adjunto,Em Exercício,Validada,32.79,19.06,7.79,3.8,2.14
+24,25,Caruaru,Professor Adjunto,Em Exercício,Validada,102.62,17.55,11.11,15.53,58.43
+25,26,FCM,Professor Adjunto,Em Exercício,Validada,29.41,27.81,0.53,0.0,1.07
+26,27,FOP,Professor Adjunto,Em Exercício,Validada,90.29,37.05,2.4,50.84,0.0
+27,28,POLI,Professor Associado,Em Exercício,Validada,100.1,50.66,5.03,0.53,43.88
+28,29,Mata Norte,Professor Adjunto,Em Exercício,Validada,51.21,38.78,2.57,0.0,9.86
+29,30,POLI,Professor Auxiliar,Em Exercício,Validada,18.07,17.0,0.0,0.0,1.07
+30,31,Reitoria,Professor Associado,Em Exercício,Validada,193.61,98.09,93.38,0.0,2.14
+31,32,FCAP,Professor Assistente,Em Exercício,Validada,79.93,34.75,3.76,0.0,41.42
+32,33,FCM,Professor Assistente,Em Exercício,Validada,128.29,60.15,33.85,0.0,34.29
+33,34,FENSG,Professor Assistente,Em Exercício,Validada,67.75,44.18,8.65,2.58,12.34
+35,36,ICB,Professor Adjunto,Afastamento Parcial (5 meses),Validada,0.0,10.84,6.39,0.0,3.05
+36,37,Mata Norte,Professor Assistente,Em Exercício,Validada,54.11,21.97,15.99,6.58,9.57
+37,38,Petrolina,Professor Adjunto,Em Exercício,Validada,247.56,135.63,77.93,12.54,21.46
+38,39,Mata Norte,Professor Adjunto,Em Exercício,Validada,78.39,32.97,35.41,3.11,6.9
+39,40,Serra Talhada,Professor Assistente,Em Exercício,Validada,76.0,29.7,26.15,3.49,16.66
+41,42,FOP,Professor Adjunto,Em Exercício,Validada,46.5,41.94,2.58,0.0,1.98
+42,43,Garanhuns,Professor Adjunto,Em Exercício,Validada,165.05,65.07,71.58,6.45,21.95
+43,44,Petrolina,Professor Associado,Em Exercício,Validada,255.82,99.88,137.71,0.0,18.23
+44,45,Mata Sul,Professor Adjunto,Em Exercício,Validada,49.62,27.09,7.0,5.44,10.09
+45,46,ICB,Professor Associado,Em Exercício,Validada,501.84,162.47,112.81,9.83,216.73
+46,47,Petrolina,Professor Adjunto,Em Exercício,Validada,46.56,29.76,13.75,0.0,3.05
+47,48,FOP,Professor Associado,Em Exercício,Validada,422.94,180.57,83.5,135.95,22.92
+48,49,Mata Norte,Professor Adjunto,Em Exercício,Validada,192.03,93.33,35.36,15.52,47.82
+49,50,Garanhuns,Professor Auxiliar,Em Exercício,Validada,70.25,46.62,0.0,10.83,12.8
+50,51,Petrolina,Professor Adjunto,Em Exercício,Validada,103.61,42.97,6.15,0.0,54.49
+52,53,Garanhuns,Professor Adjunto,Em Exercício,Validada,215.65,131.56,54.02,16.93,13.14
+53,54,ICB,Professor Assistente,Em Exercício,Validada,109.65,44.43,14.03,7.09,44.1
+54,55,Mata Norte,Professor Adjunto,Em Exercício,Validada,202.97,67.53,70.99,40.45,24.0
+55,56,ESEF,Professor Adjunto,Em Exercício,Validada,63.51,34.41,19.2,5.39,4.51
+56,57,FOP,Professor Associado,Em Exercício,Validada,178.09,57.62,43.07,55.85,21.55
+57,58,Mata Norte,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+58,59,ESEF,Professor Adjunto,Em Exercício,Validada,135.33,51.23,34.76,10.47,38.87
+59,60,FENSG,Professor Adjunto,Afastamento Parcial (4 meses),Validada,198.84,61.95,53.51,9.89,23.78
+60,61,Mata Norte,Professor Adjunto,Em Exercício,Validada,80.97,36.78,32.88,0.53,10.78
+62,63,FENSG,Professor Adjunto,Em Exercício,Validada,177.63,84.06,55.02,9.45,29.1
+64,65,POLI,Professor Adjunto,Em Exercício,Validada,263.29,50.49,137.11,5.72,69.97
+65,66,FENSG,Professor Adjunto,Em Exercício,Validada,130.21,18.14,46.52,17.4,48.15
+66,67,POLI,Professor Assistente,Em Exercício,Validada,50.48,38.96,4.67,6.85,0.0
+67,68,FCAP,Professor Adjunto,Em Exercício,Validada,167.87,68.72,32.17,19.22,47.76
+68,69,Petrolina,Professor Adjunto,Em Exercício,Validada,258.99,120.75,47.94,39.7,50.6
+69,70,Caruaru,Professor Assistente,Em Exercício,Validada,35.61,27.68,0.0,2.81,5.12
+70,71,FCM,Professor Adjunto,Em Exercício,Validada,104.88,44.79,54.11,5.98,0.0
+71,72,POLI,Professor Assistente,Em Exercício,Validada,140.51,68.06,44.51,25.96,1.98
+73,74,POLI,Professor Adjunto,Em Exercício,Validada,13.07,12.0,0.0,0.0,1.07
+76,77,POLI,Professor Adjunto,Em Exercício,Validada,143.88,65.72,1.12,69.38,7.66
+77,78,FCAP,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+80,81,Petrolina,Professor Adjunto,Em Exercício,Validada,248.42,93.29,106.03,4.76,44.34
+81,82,FCM,Professor Adjunto,Em Exercício,Validada,105.45,73.26,21.08,5.81,5.3
+82,83,POLI,Professor Adjunto,Em Exercício,Validada,78.71,52.13,16.49,0.0,10.09
+84,85,POLI,Professor Assistente,Em Exercício,Validada,101.8,47.84,19.67,0.0,34.29
+85,86,POLI,Professor Assistente,Em Exercício,Validada,25.54,21.73,2.74,0.0,1.07
+88,89,Garanhuns,Professor Adjunto,Em Exercício,Validada,96.62,38.9,1.71,0.0,56.01
+89,90,Reitoria,Professor Adjunto,Em Exercício,Validada,79.74,20.73,14.26,0.53,44.22
+91,92,POLI,Professor Adjunto,Em Exercício,Validada,45.15,44.08,0.0,0.0,1.07
+92,93,POLI,Professor Assistente,Em Exercício,Validada,31.67,27.39,0.0,0.0,4.28
+93,94,FCM,Professor Assistente,Em Exercício,Validada,19.07,18.0,0.0,0.0,1.07
+94,95,FOP,Professor Associado,Em Exercício,Validada,209.04,84.74,68.37,31.83,24.1
+95,96,FOP,Professor Titular,Em Exercício,Validada,251.03,142.78,86.28,8.06,13.91
+96,97,FCM,Professor Adjunto,Em Exercício,Validada,69.31,45.97,14.09,4.22,5.03
+97,98,POLI,Professor Assistente,Em Exercício,Validada,28.17,21.76,0.0,1.06,5.35
+98,99,POLI,Professor Assistente,Em Exercício,Validada,52.1,47.82,0.0,0.0,4.28
+99,100,Mata Norte,Professor Assistente,Em Exercício,Validada,102.23,41.87,17.83,7.17,35.36
+100,101,FCM,Professor Associado,Em Exercício,Validada,198.93,98.89,62.07,0.0,37.97
+101,102,ICB,Professor Adjunto,Em Exercício,Validada,185.3,98.86,37.08,32.51,16.85
+102,103,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+103,104,Salgueiro,Professor Adjunto,Em Exercício,Validada,152.32,37.88,14.15,7.76,92.53
+104,105,FOP,Professor Associado,Em Exercício,Validada,426.97,142.11,215.12,22.71,47.03
+105,106,Mata Norte,Professor Adjunto,Em Exercício,Validada,137.84,79.07,55.56,0.0,3.21
+106,107,FCAP,Professor Assistente,Em Exercício,Validada,0.0,33.04,0.0,0.0,0.0
+108,109,FENSG,Professor Adjunto,Em Exercício,Validada,194.72,58.65,72.31,2.63,61.13
+109,110,FENSG,Professor Associado,Em Exercício,Validada,359.42,156.68,87.76,38.25,76.73
+110,111,ICB,Professor Adjunto,Em Exercício,Validada,167.72,64.97,28.94,22.03,51.78
+111,112,POLI,Professor Adjunto,Em Exercício,Validada,220.2,104.68,68.55,21.18,25.79
+112,113,Serra Talhada,Professor Adjunto,Em Exercício,Validada,85.8,21.34,3.72,25.38,35.36
+113,114,Garanhuns,Professor Adjunto,Em Exercício,Validada,126.48,78.01,34.47,2.05,11.95
+114,115,Reitoria,Professor Associado,Em Exercício,Validada,215.1,80.1,55.3,2.31,77.39
+115,116,POLI,Professor Associado,Em Exercício,Validada,324.62,123.44,137.18,0.0,64.0
+116,117,FCAP,Professor Adjunto,Em Exercício,Validada,159.42,40.21,56.47,51.58,11.16
+117,118,Reitoria,Professor Associado,Em Exercício,Validada,274.71,104.89,101.77,2.37,65.68
+118,119,Mata Norte,Professor Assistente,Em Exercício,Validada,85.19,34.65,5.27,0.0,45.27
+119,120,Petrolina,Professor Adjunto,Em Exercício,Validada,88.77,34.54,1.71,13.72,38.8
+120,121,FENSG,Professor Adjunto,Em Exercício,Validada,49.17,38.35,3.72,6.03,1.07
+121,122,Mata Norte,Professor Associado,Em Exercício,Validada,419.77,145.13,137.27,12.92,124.45
+122,123,Reitoria,Professor Adjunto,Em Exercício,Validada,220.35,90.2,78.07,10.46,41.62
+123,124,FOP,Professor Adjunto,Em Exercício,Validada,180.09,91.53,24.91,0.0,63.65
+124,125,Petrolina,Professor Assistente,Em Exercício,Validada,49.74,11.4,0.0,0.0,38.34
+126,127,POLI,Professor Adjunto,Em Exercício,Validada,78.48,57.76,2.43,9.93,8.36
+128,129,Garanhuns,Professor Adjunto,Em Exercício,Validada,81.47,30.64,16.05,13.72,21.06
+129,130,POLI,Professor Assistente,Em Exercício,Validada,58.99,48.93,7.01,0.0,3.05
+130,131,POLI,Professor Associado,Em Exercício,Validada,471.0,154.72,299.54,0.0,16.74
+131,132,FENSG,Professor Auxiliar,Em Exercício,Validada,104.26,67.42,7.79,14.21,14.84
+132,133,FOP,Professor Adjunto,Afastamento Parcial (2 meses),Validada,215.25,62.49,49.0,37.93,35.08
+133,134,Arcoverde,Professor Adjunto,Em Exercício,Validada,276.79,77.04,103.85,2.31,93.59
+134,135,POLI,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+135,136,ICB,Professor Adjunto,Em Exercício,Validada,95.74,58.41,9.08,1.12,27.13
+136,137,POLI,Professor Assistente,Em Readaptação,Validada,6.5,,,,
+137,138,Reitoria,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+138,139,Arcoverde,Professor Adjunto,Em Exercício,Validada,197.59,56.58,95.09,22.3,23.62
+139,140,Petrolina,Professor Adjunto,Em Exercício,Validada,85.67,49.12,23.85,0.0,12.7
+141,142,Petrolina,Professor Associado,Em Exercício,Validada,156.44,50.66,46.81,2.86,56.11
+142,143,Reitoria,Professor Adjunto,Em Exercício,Validada,166.68,36.82,28.51,12.22,89.13
+143,144,Petrolina,Professor Adjunto,Em Exercício,Validada,123.84,22.62,41.16,18.21,41.85
+144,145,POLI,Professor Assistente,Em Exercício,Validada,66.16,33.24,8.01,0.0,24.91
+145,146,Petrolina,Professor Adjunto,Em Exercício,Validada,265.89,104.11,149.23,5.93,6.62
+146,147,Garanhuns,Professor Adjunto,Em Exercício,Validada,144.89,67.82,17.59,7.98,51.5
+147,148,FENSG,Professor Adjunto,Em Exercício,Validada,169.49,46.47,44.43,16.12,62.47
+150,151,Mata Norte,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+151,152,Garanhuns,Professor Assistente,Em Exercício,Validada,33.2,32.08,1.12,0.0,0.0
+152,153,Garanhuns,Professor Adjunto,Em Exercício,Validada,159.89,26.18,86.07,1.09,46.55
+153,154,ICB,Professor Adjunto,Em Exercício,Validada,117.28,54.15,34.78,1.09,27.26
+154,155,Mata Norte,Professor Associado,Em Exercício,Validada,138.79,68.52,48.67,0.0,21.6
+155,156,POLI,Professor Auxiliar,Em Exercício,Validada,64.01,58.7,2.6,0.0,2.71
+156,157,Garanhuns,Professor Adjunto,Em Exercício,Validada,387.04,179.92,119.64,8.2,79.28
+160,161,Petrolina,Professor Associado,Em Exercício,Validada,265.73,99.33,137.79,17.81,10.8
+161,162,Garanhuns,Professor Assistente,Em Exercício,Validada,39.81,22.46,8.62,0.0,8.73
+162,163,Caruaru,Professor Adjunto,Em Exercício,Validada,99.85,17.59,38.95,0.0,43.31
+163,164,Garanhuns,Professor Adjunto,Em Exercício,Validada,76.72,57.49,11.04,0.0,8.19
+164,165,POLI,Professor Adjunto,Em Exercício,Validada,144.85,65.32,70.86,2.81,5.86
+165,166,Garanhuns,Professor Adjunto,Em Exercício,Validada,190.79,110.8,54.64,0.0,25.35
+166,167,ICB,Professor Adjunto,Em Exercício,Validada,279.91,87.79,130.51,4.91,56.7
+167,168,Serra Talhada,Professor Auxiliar,Em Exercício,Validada,91.68,36.16,25.31,29.14,1.07
+169,170,FENSG,Professor Adjunto,Em Exercício,Validada,300.91,150.13,116.4,23.22,11.16
+170,171,FCM,Professor Associado,Em Exercício,Validada,233.34,59.23,99.0,12.69,62.42
+171,172,FCM,Professor Adjunto,Em Exercício,Validada,105.19,97.3,7.1,0.0,0.79
+172,173,Mata Norte,Professor Adjunto,Em Exercício,Validada,256.24,85.34,98.96,19.61,52.33
+173,174,Garanhuns,Professor Adjunto,Em Exercício,Validada,153.06,85.56,33.76,6.68,27.06
+174,175,POLI,Professor Adjunto,Em Exercício,Validada,174.6,44.32,55.63,8.37,66.28
+175,176,Mata Norte,Professor Adjunto,Em Exercício,Validada,169.54,65.64,36.36,20.72,46.82
+177,178,FCM,Professor Associado,Em Exercício,Validada,196.41,82.27,106.39,6.68,1.07
+178,179,ESEF,Professor Adjunto,Em Exercício,Validada,218.25,56.87,56.98,16.44,87.96
+179,180,Arcoverde,Professor Adjunto,Em Exercício,Validada,286.04,102.23,70.21,30.53,83.07
+181,182,Garanhuns,Professor Assistente,Em Exercício,Validada,147.54,69.8,20.87,3.29,53.58
+182,183,FENSG,Professor Assistente,Em Exercício,Validada,278.09,102.89,81.22,46.19,47.79
+183,184,FOP,Professor Associado,Em Exercício,Validada,232.28,82.84,146.02,2.63,0.79
+184,185,Petrolina,Professor Adjunto,Em Exercício,Validada,217.37,105.15,71.88,27.54,12.8
+185,186,Petrolina,Professor Adjunto,Em Exercício,Validada,274.44,100.93,48.24,50.32,74.95
+186,187,POLI,Professor Associado,Em Exercício,Validada,169.03,48.56,70.29,0.0,50.18
+187,188,Petrolina,Professor Adjunto,Em Exercício,Rejeitada,44.32,32.96,0.0,2.8,8.56
+189,190,FCM,Professor Adjunto,Em Exercício,Validada,115.94,31.91,12.5,2.05,69.48
+190,191,Garanhuns,Professor Adjunto,Afastamento Parcial (5 meses),Validada,107.185,23.15,11.46,0.0,41.05
+191,192,Reitoria,Professor Assistente,Em Readaptação,Validada,6.5,,,,
+192,193,Mata Norte,Professor Adjunto,Em Exercício,Validada,260.87,77.72,86.72,9.6,86.83
+193,194,POLI,Professor Adjunto,Em Exercício,Validada,0.0,6.0,0.0,0.53,1.07
+194,195,Mata Norte,Professor Adjunto,Em Exercício,Validada,264.45,65.89,106.12,13.65,78.79
+195,196,FENSG,Professor Auxiliar,Em Exercício,Validada,77.51,60.84,1.38,0.0,15.29
+196,197,Petrolina,Professor Adjunto,Em Exercício,Validada,65.79,42.46,15.77,0.0,7.56
+197,198,FENSG,Professor Assistente,Em Exercício,Validada,235.37,84.16,24.27,23.34,103.6
+198,199,POLI,Professor Adjunto,Em Exercício,Validada,60.23,48.66,10.5,0.0,1.07
+199,200,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+201,202,Mata Norte,Professor Auxiliar,Em Exercício,Validada,43.47,26.41,7.5,6.48,3.08
+202,203,POLI,Professor Adjunto,Em Exercício,Validada,96.34,80.97,12.68,1.62,1.07
+203,204,POLI,Professor Adjunto,Em Exercício,Validada,41.36,32.23,8.06,0.0,1.07
+204,205,POLI,Professor Adjunto,Em Exercício,Validada,45.87,41.56,4.31,0.0,0.0
+206,207,Arcoverde,Professor Adjunto,Em Exercício,Validada,89.48,35.39,44.97,4.94,4.18
+207,208,FOP,Professor Adjunto,Em Exercício,Validada,101.55,59.86,0.0,0.0,41.69
+209,210,POLI,Professor Associado,Em Exercício,Validada,311.01,147.18,157.35,6.48,0.0
+210,211,FOP,Professor Adjunto,Em Exercício,Validada,184.82,66.0,65.68,30.24,22.9
+211,212,ICB,Professor Adjunto,Em Exercício,Validada,136.76,66.35,42.35,12.39,15.67
+213,214,POLI,Professor Adjunto,Em Exercício,Validada,48.11,39.07,7.97,0.0,1.07
+214,215,FCM,Professor Adjunto,Em Exercício,Validada,113.11,84.35,8.48,14.06,6.22
+215,216,Garanhuns,Professor Adjunto,Em Exercício,Validada,87.68,40.97,18.39,9.66,18.66
+216,217,Mata Sul,Professor Adjunto,Em Exercício,Validada,256.28,102.33,79.0,40.42,34.53
+217,218,FENSG,Professor Adjunto,Em Exercício,Validada,169.69,75.35,2.18,33.74,58.42
+218,219,Caruaru,Professor Adjunto,Afastamento Parcial (4 meses),Validada,101.48,37.76,11.74,18.78,7.83
+219,220,Garanhuns,Professor Adjunto,Em Exercício,Validada,145.86,24.64,9.58,7.37,104.27
+220,221,FOP,Professor Associado,Em Exercício,Validada,351.13,137.67,43.19,57.18,113.09
+221,222,FCAP,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+222,223,FOP,Professor Associado,Em Exercício,Validada,185.29,93.7,46.5,0.0,45.09
+223,224,FENSG,Professor Adjunto,Em Exercício,Validada,318.95,96.2,155.11,16.08,51.56
+224,225,POLI,Professor Adjunto,Em Exercício,Validada,96.31,23.72,5.46,0.0,67.13
+225,226,POLI,Professor Associado,Em Exercício,Validada,470.07,160.57,188.27,105.56,15.67
+226,227,POLI,Professor Adjunto,Em Exercício,Validada,128.78,54.57,16.65,11.03,46.53
+227,228,FCM,Professor Adjunto,Em Exercício,Validada,75.24,71.46,0.0,0.0,3.78
+229,230,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+230,231,Caruaru,Professor Adjunto,Em Exercício,Validada,45.42,29.18,4.17,2.81,9.26
+231,232,Garanhuns,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+232,233,POLI,Professor Assistente,Em Exercício,Validada,24.58,18.41,0.0,0.0,6.17
+233,234,Reitoria,Professor Associado,Em Exercício,Validada,256.29,70.48,81.39,2.31,102.11
+234,235,Mata Norte,Professor Adjunto,Em Exercício,Validada,43.97,22.49,15.2,0.0,6.28
+235,236,FCM,Professor Assistente,Em Exercício,Validada,32.96,30.0,1.89,0.0,1.07
+236,237,POLI,Professor Auxiliar,Em Exercício,Validada,0.0,10.73,0.53,0.53,3.21
+238,239,Petrolina,Professor Adjunto,Em Exercício,Validada,247.9,64.9,81.13,39.55,62.32
+239,240,FOP,Professor Associado,Em Exercício,Validada,253.49,121.74,65.56,52.59,13.6
+240,241,FENSG,Professor Adjunto,Em Exercício,Validada,332.09,134.92,95.7,60.53,40.94
+241,242,FOP,Professor Adjunto,Em Exercício,Validada,193.56,95.7,57.67,37.26,2.93
+242,243,Caruaru,Professor Assistente,Em Exercício,Validada,52.13,28.74,1.71,8.73,12.95
+243,244,Mata Sul,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+244,245,FOP,Professor Adjunto,Em Exercício,Validada,284.87,130.81,130.19,13.78,10.09
+246,247,ICB,Professor Adjunto,Em Exercício,Validada,78.78,25.81,23.2,6.15,23.62
+247,248,FCM,Professor Associado,Em Exercício,Validada,255.28,76.85,116.27,10.59,51.57
+248,249,ICB,Professor Associado,Em Exercício,Validada,239.63,74.61,125.79,0.0,39.23
+249,250,Mata Norte,Professor Assistente,Em Exercício,Validada,56.46,32.41,6.97,16.01,1.07
+250,251,FENSG,Professor Auxiliar,Em Exercício,Validada,69.62,65.26,0.0,4.36,0.0
+251,252,FENSG,Professor Associado,Afastamento Parcial (2 meses),Validada,240.52,132.69,68.7,2.63,2.14
+252,253,Arcoverde,Professor Assistente,Em Exercício,Validada,40.86,34.02,0.0,5.77,1.07
+253,254,Garanhuns,Professor Assistente,Afastamento Parcial (6 meses),Validada,40.35,19.22,6.08,0.53,1.07
+254,255,FCM,Professor Adjunto,Em Exercício,Validada,154.98,71.65,1.06,1.06,81.21
+255,256,Arcoverde,Professor Adjunto,Em Exercício,Validada,215.32,71.81,76.6,22.53,44.38
+256,257,FOP,Professor Adjunto,Em Exercício,Validada,168.56,83.73,68.21,11.21,5.41
+258,259,FCM,Professor Adjunto,Em Exercício,Validada,72.55,53.56,4.8,0.0,14.19
+259,260,Garanhuns,Professor Adjunto,Em Exercício,Validada,210.37,122.35,40.88,8.43,38.71
+260,261,POLI,Professor Associado,Em Exercício,Validada,230.51,133.79,88.86,7.86,0.0
+261,262,Arcoverde,Professor Adjunto,Em Exercício,Validada,407.24,138.82,188.84,10.95,68.63
+262,263,Caruaru,Professor Adjunto,Em Exercício,Validada,21.07,17.52,3.55,0.0,0.0
+263,264,Caruaru,Professor Adjunto,Afastamento Parcial (5 meses),Validada,65.5775,12.0,0.0,0.0,34.29
+264,265,Petrolina,Professor Adjunto,Em Exercício,Validada,184.07,113.31,59.76,0.0,11.0
+265,266,Caruaru,Professor Adjunto,Em Exercício,Validada,117.66,22.13,40.32,15.86,39.35
+266,267,FENSG,Professor Assistente,Em Exercício,Validada,89.97,62.2,19.12,4.1,4.55
+267,268,ICB,Professor Adjunto,Em Exercício,Validada,54.86,37.91,12.85,0.0,4.1
+268,269,FCM,Professor Adjunto,Em Exercício,Validada,103.31,55.87,5.81,6.27,35.36
+269,270,FCAP,Professor Adjunto,Em Exercício,Validada,231.62,144.77,69.9,7.93,9.02
+270,271,Petrolina,Professor Adjunto,Em Exercício,Validada,134.73,66.56,18.68,13.16,36.33
+271,272,Petrolina,Professor Adjunto,Em Exercício,Validada,269.03,79.02,145.93,6.69,37.39
+272,273,Petrolina,Professor Adjunto,Em Exercício,Validada,106.88,47.04,11.84,2.05,45.95
+273,274,Petrolina,Professor Adjunto,Em Exercício,Validada,37.85,22.07,12.27,0.0,3.51
+274,275,Petrolina,Professor Adjunto,Em Exercício,Validada,208.77,81.13,83.03,4.04,40.57
+275,276,FCM,Professor Associado,Em Exercício,Validada,288.23,102.9,176.63,5.62,3.08
+276,277,POLI,Professor Adjunto,Em Exercício,Validada,24.4,21.35,0.0,0.0,3.05
+277,278,Mata Sul,Professor Assistente,Em Exercício,Rejeitada,85.36,17.4,6.79,2.81,58.36
+278,279,Petrolina,Professor Assistente,Em Exercício,Validada,119.3,44.99,10.31,20.9,43.1
+279,280,POLI,Professor Adjunto,Em Exercício,Validada,45.01,23.65,5.9,13.6,1.86
+281,282,FCM,Professor Adjunto,Em Exercício,Validada,39.1,36.42,1.06,1.62,0.0
+282,283,POLI,Professor Adjunto,Em Exercício,Validada,153.8,76.1,60.89,0.0,16.81
+283,284,POLI,Professor Associado,Em Exercício,Validada,196.52,75.81,115.29,3.28,2.14
+285,286,FCAP,Professor Assistente,Em Exercício,Validada,52.55,30.0,18.68,3.87,0.0
+286,287,FOP,Professor Auxiliar,Em Exercício,Validada,43.13,23.12,1.06,0.0,18.95
+287,288,Garanhuns,Professor Assistente,Em Exercício,Validada,29.28,18.9,0.53,9.85,0.0
+288,289,FCAP,Professor Assistente,Em Exercício,Validada,0.0,21.0,0.0,0.0,0.0
+289,290,FOP,Professor Associado,Em Exercício,Validada,318.02,105.33,93.5,62.95,56.24
+290,291,FOP,Professor Associado,Em Exercício,Validada,174.49,104.26,57.05,0.0,13.18
+292,293,POLI,Professor Adjunto,Em Exercício,Validada,66.37,24.7,0.0,40.6,1.07
+294,295,Petrolina,Professor Assistente,Em Exercício,Rejeitada,46.98,22.87,7.69,12.37,4.05
+295,296,Serra Talhada,Professor Assistente,Em Exercício,Validada,204.27,35.74,142.44,17.07,9.02
+296,297,ICB,Professor Adjunto,Em Exercício,Validada,32.29,23.84,8.45,0.0,0.0
+297,298,FOP,Professor Adjunto,Em Exercício,Validada,74.54,47.22,24.52,2.8,0.0
+298,299,Petrolina,Professor Assistente,Em Exercício,Validada,100.02,48.26,18.24,24.3,9.22
+299,300,FCM,Professor Assistente,Em Exercício,Validada,38.03,35.9,1.06,0.0,1.07
+300,301,Mata Norte,Professor Titular,Afastamento Parcial (3 meses),Validada,65.875,13.59,1.71,26.26,11.14
+301,302,ICB,Professor Assistente,Em Exercício,Validada,57.73,18.21,4.16,0.0,35.36
+302,303,Mata Norte,Professor Adjunto,Em Exercício,Validada,176.38,51.43,42.53,26.45,55.97
+303,304,POLI,Professor Assistente,Em Exercício,Validada,92.89,38.62,27.53,12.6,14.14
+304,305,ICB,Professor Adjunto,Em Exercício,Validada,103.21,32.78,16.28,38.18,15.97
+306,307,ESEF,Professor Assistente,Em Exercício,Validada,60.83,40.24,0.0,8.66,11.93
+307,308,POLI,Professor Assistente,Em Exercício,Validada,81.89,50.76,12.32,0.53,18.28
+308,309,Mata Norte,Professor Assistente,Em Exercício,Validada,116.39,76.25,11.57,10.29,18.28
+309,310,POLI,Professor Adjunto,Em Exercício,Validada,178.5,47.8,61.04,11.84,57.82
+310,311,FCAP,Professor Adjunto,Em Exercício,Validada,279.68,98.52,85.36,24.94,70.86
+311,312,Mata Norte,Professor Adjunto,Em Exercício,Validada,121.84,90.86,19.18,0.0,11.8
+313,314,FOP,Professor Adjunto,Em Exercício,Validada,95.27,44.49,23.01,3.17,24.6
+316,317,Garanhuns,Professor Auxiliar,Em Exercício,Validada,67.6,54.13,2.05,6.27,5.15
+317,318,FCM,Professor Adjunto,Em Exercício,Validada,69.47,30.19,39.28,0.0,0.0
+318,319,POLI,Professor Associado,Em Exercício,Validada,100.88,58.5,34.82,0.0,7.56
+319,320,FCAP,Professor Assistente,Em Exercício,Validada,0.0,6.0,0.0,0.0,0.0
+320,321,Mata Norte,Professor Adjunto,Em Exercício,Validada,44.99,27.6,17.39,0.0,0.0
+321,322,Reitoria,Professor Assistente,Em Exercício,Validada,73.62,12.41,7.24,0.0,53.97
+322,323,FCM,Professor Auxiliar,Em Exercício,Validada,31.06,30.0,1.06,0.0,0.0
+324,325,Mata Sul,Professor Adjunto,Em Exercício,Validada,164.78,69.99,11.96,10.11,72.72
+325,326,POLI,Professor Adjunto,Afastamento Parcial (3 meses),Validada,15.6625,12.0,0.53,0.0,0.0
+326,327,Mata Norte,Professor Adjunto,Em Exercício,Validada,303.02,122.07,115.34,12.49,53.12
+327,328,POLI,Professor Assistente,Em Exercício,Validada,55.85,45.4,0.0,10.25,0.2
+328,329,FCM,Professor Adjunto,Em Exercício,Validada,114.84,93.28,18.82,1.67,1.07
+329,330,ICB,Professor Adjunto,Em Exercício,Validada,98.46,24.28,20.51,6.68,46.99
+330,331,FCM,Professor Adjunto,Em Exercício,Validada,84.64,36.47,38.77,6.28,3.12
+331,332,Garanhuns,Professor Associado,Em Exercício,Validada,209.23,108.64,43.69,11.39,45.51
+332,333,FOP,Professor Adjunto,Em Exercício,Validada,256.66,107.44,113.45,18.8,16.97
+334,335,Garanhuns,Professor Adjunto,Em Exercício,Validada,122.61,23.46,7.02,51.19,40.94
+335,336,POLI,Professor Assistente,Em Exercício,Validada,85.55,37.79,9.46,8.06,30.24
+336,337,Arcoverde,Professor Adjunto,Em Exercício,Validada,127.88,48.93,25.02,0.53,53.4
+337,338,Arcoverde,Professor Assistente,Em Exercício,Rejeitada,38.31,37.24,0.0,0.0,1.07
+338,339,FCM,Professor Adjunto,Em Exercício,Validada,167.18,50.55,39.33,7.38,69.92
+339,340,Arcoverde,Professor Adjunto,Em Exercício,Validada,37.86,25.14,2.4,2.86,7.46
+340,341,Petrolina,Professor Auxiliar,Em Exercício,Validada,0.0,21.0,0.0,0.0,0.0
+341,342,Reitoria,Professor Adjunto,Em Exercício,Validada,166.51,45.12,8.42,3.35,109.62
+342,343,Petrolina,Professor Adjunto,Em Exercício,Validada,149.37,44.08,60.68,29.04,15.57
+343,344,Petrolina,Professor Adjunto,Em Exercício,Validada,312.75,79.76,156.65,10.48,65.86
+344,345,Petrolina,Professor Adjunto,Em Exercício,Validada,183.65,62.68,72.78,28.14,20.05
+345,346,Garanhuns,Professor Adjunto,Em Exercício,Validada,69.68,24.61,9.71,0.0,35.36
+346,347,ICB,Professor Adjunto,Em Exercício,Validada,48.47,13.06,1.12,0.0,34.29
+347,348,FENSG,Professor Associado,Em Exercício,Validada,153.58,61.03,51.44,2.31,38.8
+348,349,FCAP,Professor Adjunto,Em Exercício,Validada,298.99,104.34,96.76,27.54,70.35
+349,350,Mata Norte,Professor Adjunto,Afastamento Parcial (6 meses),Validada,80.22,30.88,14.05,7.48,1.07
+350,351,Petrolina,Professor Assistente,Em Exercício,Validada,102.54,58.4,16.14,7.71,20.29
+351,352,POLI,Professor Assistente,Em Exercício,Validada,30.84,29.13,1.71,0.0,0.0
+352,353,FENSG,Professor Assistente,Em Exercício,Validada,95.05,81.46,3.5,0.0,10.09
+353,354,FCM,Professor Auxiliar,Em Exercício,Validada,110.27,74.57,28.16,0.53,7.01
+354,355,POLI,Professor Assistente,Em Exercício,Validada,38.93,33.65,0.0,0.53,4.75
+356,357,FENSG,Professor Adjunto,Em Exercício,Validada,173.02,94.27,37.4,9.4,31.95
+357,358,FENSG,Professor Adjunto,Em Exercício,Validada,112.19,28.86,2.77,29.45,51.11
+358,359,FCAP,Professor Assistente,Afastamento Parcial (2 meses),Validada,169.797,48.28,4.96,80.0,12.3
+359,360,Mata Norte,Professor Adjunto,Em Exercício,Validada,117.77,59.26,53.57,4.94,0.0
+360,361,FENSG,Professor Adjunto,Em Exercício,Validada,119.73,33.66,11.78,28.12,46.17
+361,362,FENSG,Professor Associado,Em Exercício,Validada,252.16,148.06,92.69,7.11,4.3
+363,364,POLI,Professor Associado,Em Exercício,Validada,201.8,51.23,115.75,0.53,34.29
+364,365,Mata Norte,Professor Adjunto,Em Exercício,Validada,238.11,110.31,59.68,25.3,42.82
+365,366,Garanhuns,Professor Adjunto,Em Exercício,Validada,80.73,48.16,24.61,3.45,4.51
+366,367,FCM,Professor Assistente,Em Exercício,Validada,88.76,38.44,1.71,0.0,48.61
+367,368,Arcoverde,Professor Assistente,Em Exercício,Validada,0.0,34.43,0.0,0.0,0.0
+368,369,POLI,Professor Assistente,Em Exercício,Validada,72.73,53.8,10.13,0.0,8.8
+369,370,Serra Talhada,Professor Auxiliar,Em Exercício,Validada,57.08,22.86,14.89,16.26,3.07
+370,371,Petrolina,Professor Adjunto,Em Exercício,Validada,158.82,55.63,73.44,9.93,19.82
+371,372,FENSG,Professor Assistente,Em Exercício,Validada,30.54,20.34,10.2,0.0,0.0
+372,373,Mata Norte,Professor Adjunto,Em Exercício,Validada,172.32,44.21,35.65,3.87,88.59
+373,374,FCM,Professor Adjunto,Em Exercício,Validada,223.71,109.15,14.74,82.23,17.59
+374,375,FCM,Professor Adjunto,Em Exercício,Validada,106.5,101.2,5.3,0.0,0.0
+375,376,POLI,Professor Adjunto,Em Exercício,Validada,259.06,106.32,77.26,5.23,70.25
+376,377,ICB,Professor Auxiliar,Em Exercício,Validada,61.61,32.99,27.04,0.0,1.58
+377,378,ESEF,Professor Adjunto,Em Exercício,Validada,118.03,69.87,24.16,7.35,16.65
+378,379,Caruaru,Professor Assistente,Em Exercício,Validada,86.04,30.21,13.66,0.53,41.64
+379,380,Petrolina,Professor Assistente,Em Exercício,Validada,63.82,40.55,11.38,2.63,9.26
+380,381,Garanhuns,Professor Adjunto,Em Exercício,Validada,188.06,113.94,35.62,18.76,19.74
+381,382,ICB,Professor Adjunto,Em Exercício,Validada,138.77,98.36,16.13,14.47,9.81
+382,383,FCAP,Professor Auxiliar,Em Exercício,Validada,59.59,38.73,0.0,0.0,20.86
+383,384,Petrolina,Professor Assistente,Em Exercício,Validada,29.86,16.28,0.0,6.12,7.46
+384,385,ESEF,Professor Associado,Em Exercício,Validada,115.77,39.42,55.25,10.3,10.8
+385,386,Caruaru,Professor Adjunto,Em Exercício,Validada,54.57,22.78,16.75,0.53,14.51
+388,389,POLI,Professor Associado,Em Exercício,Validada,279.79,93.72,145.92,2.35,37.8
+389,390,Garanhuns,Professor Adjunto,Afastamento Parcial (2 meses),Validada,154.863,39.21,40.86,6.31,46.36
+390,391,FOP,Professor Adjunto,Em Exercício,Validada,140.74,82.55,26.82,22.4,8.97
+391,392,FCM,Professor Adjunto,Em Exercício,Validada,121.91,60.91,19.76,15.3,25.94
+392,393,FCM,Professor Adjunto,Em Exercício,Validada,68.11,32.5,18.36,9.05,8.2
+393,394,Garanhuns,Professor Assistente,Em Exercício,Validada,56.78,52.17,0.0,4.61,0.0
+394,395,Garanhuns,Professor Assistente,Em Exercício,Validada,62.77,41.79,12.7,7.21,1.07
+395,396,FCM,Professor Assistente,Em Exercício,Validada,109.4,49.26,5.74,2.71,51.69
+396,397,POLI,Professor Assistente,Em Exercício,Validada,53.29,28.15,10.54,0.0,14.6
+397,398,FCAP,Professor Assistente,Em Exercício,Validada,124.26,53.19,5.93,10.56,54.58
+398,399,Garanhuns,Professor Assistente,Em Exercício,Validada,57.79,50.14,6.58,0.0,1.07
+399,400,FCM,Professor Associado,Em Exercício,Validada,191.74,125.1,58.47,5.12,3.05
+401,402,Mata Norte,Professor Adjunto,Em Exercício,Validada,157.18,78.9,28.84,0.0,49.44
+402,403,Petrolina,Professor Adjunto,Em Exercício,Validada,89.14,39.23,48.89,1.02,0.0
+403,404,FCAP,Professor Adjunto,Em Exercício,Validada,129.77,78.23,36.04,0.0,15.5
+405,406,Mata Norte,Professor Adjunto,Em Exercício,Validada,151.14,107.82,35.63,7.69,0.0
+406,407,FCAP,Professor Auxiliar,Em Exercício,Rejeitada,38.83,18.72,4.45,6.64,9.02
+407,408,FCM,Professor Adjunto,Em Exercício,Validada,60.04,49.36,10.68,0.0,0.0
+408,409,POLI,Professor Assistente,Em Exercício,Validada,56.34,27.31,16.82,2.58,9.63
+410,411,POLI,Professor Assistente,Em Exercício,Validada,0.0,0.0,0.0,0.0,4.05
+411,412,FOP,Professor Adjunto,Em Exercício,Validada,104.27,72.89,20.04,7.83,3.51
+412,413,Mata Norte,Professor Adjunto,Em Exercício,Validada,154.46,71.29,59.5,14.25,9.42
+413,414,POLI,Professor Assistente,Em Exercício,Validada,80.28,9.79,0.0,12.01,58.48
+414,415,POLI,Professor Auxiliar,Afastamento Total,Validada,6.5,,,,
+415,416,FOP,Professor Associado,Em Exercício,Validada,271.66,148.47,74.28,5.6,43.31
+416,417,ICB,Professor Adjunto,Em Exercício,Validada,0.0,23.05,6.35,0.0,0.0
+418,419,POLI,Professor Adjunto,Em Exercício,Validada,69.79,34.83,29.4,2.05,3.51
+419,420,FCM,Professor Adjunto,Em Exercício,Validada,132.91,56.82,23.01,12.35,40.73
+420,421,Mata Norte,Professor Adjunto,Em Exercício,Validada,163.56,62.68,38.54,8.93,53.41
+421,422,Garanhuns,Professor Assistente,Em Exercício,Validada,40.77,35.87,1.71,0.0,3.19
+422,423,FOP,Professor Adjunto,Em Exercício,Validada,128.05,93.02,11.67,17.78,5.58
+423,424,FCAP,Professor Adjunto,Em Exercício,Validada,50.39,28.69,17.63,0.0,4.07
+424,425,ICB,Professor Adjunto,Em Exercício,Validada,168.05,82.05,64.64,9.29,12.07
+425,426,Serra Talhada,Professor Adjunto,Em Exercício,Validada,125.55,24.12,80.59,8.4,12.44
+426,427,POLI,Professor Adjunto,Em Exercício,Validada,74.64,26.84,1.71,2.58,43.51
+427,428,ESEF,Professor Adjunto,Em Exercício,Validada,225.42,80.88,59.37,30.19,54.98
+428,429,Mata Norte,Professor Associado,Em Exercício,Validada,204.31,117.14,69.05,14.91,3.21
+429,430,POLI,Professor Associado,Em Exercício,Validada,183.07,82.43,79.52,4.66,16.46
+430,431,Reitoria,Professor Associado,Afastamento Total,Validada,6.5,,,,
+431,432,ESEF,Professor Adjunto,Em Exercício,Validada,67.89,14.42,15.3,2.81,35.36
+432,433,FCM,Professor Associado,Em Exercício,Validada,133.43,79.77,49.32,4.34,0.0
+433,434,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+434,435,Garanhuns,Professor Assistente,Em Exercício,Validada,0.0,20.42,3.57,0.0,1.9
+435,436,FENSG,Professor Adjunto,Em Exercício,Validada,160.32,69.96,23.69,16.88,49.79
+436,437,FOP,Professor Adjunto,Em Exercício,Validada,159.77,78.69,15.87,55.35,9.86
+437,438,POLI,Professor Adjunto,Em Exercício,Validada,62.15,55.0,4.1,0.0,3.05
+438,439,ESEF,Professor Adjunto,Em Exercício,Validada,171.76,85.75,28.39,16.76,40.86
+439,440,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+440,441,ICB,Professor Adjunto,Em Exercício,Validada,47.8,24.73,0.0,12.98,10.09
+441,442,FCM,Professor Adjunto,Em Exercício,Validada,154.65,106.59,48.06,0.0,0.0
+442,443,ICB,Professor Adjunto,Em Exercício,Validada,27.81,23.52,2.43,0.0,1.86
+443,444,POLI,Professor Adjunto,Em Exercício,Validada,39.92,22.04,8.2,2.05,7.63
+444,445,FENSG,Professor Auxiliar,Em Exercício,Validada,49.11,26.87,5.05,4.02,13.17
+446,447,Petrolina,Professor Adjunto,Em Exercício,Validada,97.44,33.32,19.54,23.03,21.55
+447,448,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+449,450,Petrolina,Professor Auxiliar,Em Exercício,Validada,22.51,18.0,0.0,0.0,4.51
+450,451,FENSG,Professor Assistente,Em Exercício,Validada,90.98,51.59,15.99,12.24,11.16
+452,453,FENSG,Professor Adjunto,Em Exercício,Validada,250.19,101.68,28.94,55.33,64.24
+454,455,Garanhuns,Professor Adjunto,Em Exercício,Validada,127.46,88.27,20.48,13.62,5.09
+455,456,Petrolina,Professor Adjunto,Em Exercício,Validada,94.83,45.07,27.89,11.7,10.17
+456,457,FENSG,Professor Assistente,Em Exercício,Validada,179.64,54.06,32.78,44.37,48.43
+457,458,Mata Norte,Professor Adjunto,Em Exercício,Validada,95.06,63.31,27.98,2.7,1.07
+458,459,FCM,Professor Assistente,Em Exercício,Validada,67.06,40.55,1.36,2.98,22.17
+460,461,ESEF,Professor Adjunto,Em Exercício,Validada,290.99,93.21,97.66,21.36,78.76
+461,462,Mata Norte,Professor Assistente,Em Exercício,Validada,121.39,50.05,17.82,12.74,40.78
+463,464,Petrolina,Professor Adjunto,Afastamento Parcial (6 meses),Validada,156.54,45.16,25.33,9.27,24.6
+464,465,Petrolina,Professor Assistente,Afastamento Parcial (6 meses),Validada,163.155,65.8,19.15,14.92,8.9
+465,466,Mata Norte,Professor Adjunto,Em Exercício,Validada,185.12,85.33,35.86,22.88,41.05
+466,467,FOP,Professor Adjunto,Em Exercício,Validada,93.43,42.43,15.3,2.08,33.62
+467,468,Garanhuns,Professor Adjunto,Em Exercício,Validada,159.89,66.04,49.53,5.98,38.34
+468,469,Petrolina,Professor Adjunto,Em Exercício,Validada,205.12,101.53,73.73,0.0,29.86
+469,470,FENSG,Professor Adjunto,Em Exercício,Validada,257.62,74.9,50.68,25.0,107.04
+470,471,Petrolina,Professor Adjunto,Em Exercício,Validada,117.37,52.48,34.16,12.78,17.95
+471,472,Arcoverde,Professor Adjunto,Em Exercício,Validada,73.75,29.88,35.38,4.71,3.78
+472,473,POLI,Professor Associado,Em Exercício,Validada,144.89,39.04,77.72,0.0,28.13
+473,474,POLI,Professor Adjunto,Em Exercício,Validada,72.5,29.19,0.0,0.0,43.31
+474,475,FCM,Professor Adjunto,Em Exercício,Validada,84.12,64.61,0.0,19.51,0.0
+475,476,POLI,Professor Adjunto,Em Exercício,Validada,69.5,60.92,8.58,0.0,0.0
+476,477,Caruaru,Professor Assistente,Em Exercício,Validada,79.97,30.2,0.0,0.53,49.24
+479,480,Reitoria,Professor Associado,Em Exercício,Validada,173.94,31.39,34.84,58.37,49.34
+480,481,FOP,Professor Adjunto,Em Exercício,Validada,46.96,23.92,3.01,2.86,17.17
+482,483,ICB,Professor Adjunto,Em Exercício,Validada,0.0,12.0,0.0,0.0,0.0
+483,484,Reitoria,Professor Adjunto,Em Exercício,Validada,126.48,10.06,8.57,7.43,100.42
+484,485,FCAP,Professor Adjunto,Em Exercício,Rejeitada,156.12,30.52,15.09,10.74,99.77
+485,486,FCM,Professor Adjunto,Em Exercício,Validada,85.11,79.56,4.48,0.0,1.07
+486,487,FCM,Professor Auxiliar,Em Exercício,Validada,69.29,59.39,6.75,2.08,1.07
+487,488,FOP,Professor Adjunto,Em Exercício,Validada,51.4,42.0,0.0,0.0,9.4
+488,489,POLI,Professor Adjunto,Afastamento Parcial (6 meses),Validada,37.98,21.04,0.0,0.0,4.28
+490,491,FOP,Professor Adjunto,Em Exercício,Validada,263.0,133.4,65.88,43.26,20.46
+491,492,Petrolina,Professor Adjunto,Em Exercício,Validada,113.2,50.77,48.61,2.18,11.64
+492,493,FCM,Professor Adjunto,Em Exercício,Validada,124.3,74.37,42.99,6.94,0.0
+493,494,FCM,Professor Associado,Afastamento Total,Validada,6.5,,,,
+494,495,Garanhuns,Professor Adjunto,Em Exercício,Validada,241.86,81.11,75.99,0.0,84.76
+495,496,FCM,Professor Adjunto,Em Exercício,Validada,226.04,126.06,37.88,30.89,31.21
+496,497,Petrolina,Professor Assistente,Em Exercício,Validada,91.79,63.24,18.92,0.0,9.63
+497,498,Mata Sul,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+498,499,FENSG,Professor Associado,Em Exercício,Validada,247.32,126.54,81.28,6.74,32.76
+499,500,FENSG,Professor Associado,Em Exercício,Validada,360.36,155.58,70.41,54.9,79.47
+500,501,POLI,Professor Adjunto,Em Exercício,Validada,164.1,65.34,89.84,1.59,7.33
+501,502,ESEF,Professor Associado,Em Exercício,Validada,205.89,51.69,65.87,0.0,88.33
+502,503,POLI,Professor Associado,Em Exercício,Validada,270.17,122.1,111.08,6.72,30.27
+503,504,ICB,Professor Adjunto,Em Exercício,Validada,174.57,53.57,43.81,13.93,63.26
+504,505,Mata Norte,Professor Associado,Em Exercício,Validada,227.4,76.12,70.39,2.81,78.08
+505,506,FCAP,Professor Assistente,Em Exercício,Rejeitada,0.0,14.94,6.62,0.53,0.0
+506,507,ESEF,Professor Associado,Em Exercício,Validada,212.15,70.34,86.11,16.46,39.24
+507,508,FCM,Professor Adjunto,Em Exercício,Validada,33.44,21.51,10.84,1.09,0.0
+508,509,ICB,Professor Associado,Em Exercício,Validada,159.33,59.17,47.19,0.0,52.97
+509,510,FOP,Professor Adjunto,Em Exercício,Validada,263.94,156.79,56.7,7.14,43.31
+510,511,POLI,Professor Adjunto,Em Exercício,Validada,200.26,79.99,62.33,22.77,35.17
+511,512,POLI,Professor Adjunto,Em Exercício,Validada,123.62,66.47,44.63,0.0,12.52
+512,513,ESEF,Professor Associado,Em Exercício,Validada,288.72,41.51,105.19,6.68,135.34
+513,514,POLI,Professor Adjunto,Em Exercício,Validada,37.16,33.66,2.43,0.0,1.07
+515,516,FCM,Professor Assistente,Em Exercício,Validada,65.44,60.27,1.06,1.06,3.05
+516,517,FCAP,Professor Auxiliar,Em Exercício,Validada,46.41,26.11,7.51,0.0,12.79
+517,518,Mata Norte,Professor Associado,Em Exercício,Validada,260.3,105.58,129.89,4.93,19.9
+518,519,FOP,Professor Adjunto,Em Exercício,Validada,55.64,54.57,0.0,0.0,1.07
+519,520,POLI,Professor Adjunto,Em Exercício,Validada,88.43,24.88,20.03,3.41,40.11
+520,521,Arcoverde,Professor Adjunto,Em Exercício,Validada,80.65,39.59,30.3,8.32,2.44
+521,522,ESEF,Professor Associado,Em Exercício,Validada,288.44,130.24,104.28,5.42,48.5
+522,523,FOP,Professor Associado,Em Exercício,Validada,226.44,94.06,81.68,3.67,47.03
+523,524,FCAP,Professor Auxiliar,Em Exercício,Validada,64.86,54.0,0.0,0.0,10.86
+524,525,Serra Talhada,Professor Assistente,Em Exercício,Validada,227.1,44.91,33.06,41.88,107.25
+525,526,Petrolina,Professor Adjunto,Em Exercício,Validada,218.17,78.0,47.34,42.5,50.33
+526,527,FCAP,Professor Adjunto,Em Exercício,Validada,149.9,68.66,51.6,18.48,11.16
+527,528,FOP,Professor Associado,Em Exercício,Validada,163.04,75.1,33.03,39.24,15.67
+528,529,Petrolina,Professor Adjunto,Afastamento Parcial (6 meses),Validada,130.995,33.57,5.56,2.18,46.02
+529,530,FCAP,Professor Adjunto,Em Exercício,Validada,167.29,75.35,38.58,38.76,14.6
+531,532,FENSG,Professor Adjunto,Em Exercício,Validada,50.64,21.76,2.96,15.83,10.09
+532,533,Reitoria,Professor Adjunto,Em Exercício,Validada,173.62,51.07,40.75,14.21,67.59
+533,534,Mata Norte,Professor Adjunto,Em Exercício,Validada,118.14,56.33,43.9,10.41,7.5
+534,535,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+535,536,Mata Norte,Professor Assistente,Em Exercício,Validada,110.67,17.55,7.13,15.41,70.58
+537,538,FENSG,Professor Adjunto,Em Exercício,Validada,254.89,80.12,68.71,46.19,59.87
+538,539,FENSG,Professor Assistente,Em Exercício,Validada,166.51,23.63,14.47,40.38,88.03
+539,540,ICB,Professor Adjunto,Em Exercício,Validada,59.65,47.98,2.62,5.61,3.44
+540,541,FCM,Professor Auxiliar,Em Exercício,Validada,69.99,38.49,20.8,0.0,10.7
+542,543,FENSG,Professor Adjunto,Em Exercício,Validada,148.0,75.14,44.51,28.35,0.0
+543,544,FENSG,Professor Adjunto,Em Exercício,Validada,184.01,74.26,53.77,4.76,51.22
+544,545,Mata Norte,Professor Associado,Em Exercício,Validada,225.81,88.64,86.71,30.14,20.32
+545,546,FCM,Professor Assistente,Em Exercício,Validada,29.47,19.26,6.16,0.0,4.05
+546,547,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+547,548,FENSG,Professor Assistente,Em Exercício,Validada,177.76,74.71,15.49,17.35,70.21
+548,549,POLI,Professor Associado,Em Exercício,Validada,112.35,39.17,31.45,0.0,41.73
+550,551,FENSG,Professor Assistente,Em Exercício,Validada,121.0,37.26,1.71,10.02,72.01
+552,553,ICB,Professor Adjunto,Em Exercício,Validada,49.27,35.78,7.91,0.0,5.58
+553,554,Mata Norte,Professor Associado,Em Exercício,Validada,223.76,83.42,42.64,2.18,95.52
+554,555,Petrolina,Professor Assistente,Em Exercício,Validada,73.91,32.57,4.34,0.0,37.0
+555,556,Reitoria,Professor Associado,Em Exercício,Validada,160.56,34.55,43.65,2.18,80.18
+556,557,FOP,Professor Adjunto,Em Exercício,Validada,146.25,116.06,22.86,0.0,7.33
+558,559,Petrolina,Professor Adjunto,Em Exercício,Validada,250.34,125.54,50.42,20.07,54.31
+559,560,Petrolina,Professor Adjunto,Afastamento Parcial (6 meses),Validada,123.66,32.69,16.11,22.85,10.79
+561,562,Garanhuns,Professor Adjunto,Em Exercício,Validada,82.29,38.54,14.07,15.11,14.57
+562,563,Petrolina,Professor Assistente,Em Exercício,Validada,78.39,18.3,7.76,8.33,44.0
+563,564,Mata Norte,Professor Titular,Em Exercício,Validada,73.14,34.78,9.42,9.24,19.7
+564,565,FCM,Professor Adjunto,Em Exercício,Validada,53.44,33.15,17.24,0.0,3.05
+565,566,FENSG,Professor Assistente,Em Exercício,Validada,60.26,33.08,14.29,2.8,10.09
+566,567,Petrolina,Professor Adjunto,Em Exercício,Validada,107.63,41.47,43.55,13.19,9.42
+567,568,FCAP,Professor Assistente,Em Exercício,Validada,148.95,59.22,9.04,13.76,66.93
+568,569,Garanhuns,Professor Assistente,Em Exercício,Validada,67.21,21.2,7.89,29.41,8.71
+569,570,POLI,Professor Adjunto,Em Exercício,Validada,147.73,87.88,44.47,13.24,2.14
+570,571,FENSG,Professor Assistente,Em Exercício,Validada,138.75,60.18,52.34,0.0,26.23
+571,572,Mata Norte,Professor Adjunto,Em Exercício,Validada,236.57,72.26,35.84,26.44,102.03
+573,574,FCM,Professor Adjunto,Em Exercício,Validada,94.02,53.34,16.54,0.0,24.14
+576,577,FOP,Professor Adjunto,Em Exercício,Validada,253.91,46.31,53.09,137.47,17.04
+577,578,FENSG,Professor Adjunto,Em Exercício,Validada,131.75,55.95,30.58,27.54,17.68
+578,579,FENSG,Professor Adjunto,Afastamento Parcial (6 meses),Validada,260.505,96.39,77.28,0.0,0.0
+579,580,Petrolina,Professor Auxiliar,Em Exercício,Validada,50.88,38.39,2.83,9.66,0.0
+580,581,FENSG,Professor Adjunto,Em Exercício,Validada,237.04,99.98,68.12,31.8,37.14
+581,582,ESEF,Professor Associado,Em Exercício,Validada,188.97,62.02,86.43,15.18,25.34
+582,583,ICB,Professor Assistente,Em Exercício,Validada,75.66,41.91,7.48,0.0,26.27
+583,584,ICB,Professor Associado,Em Exercício,Validada,201.2,76.63,67.19,4.1,53.28
+584,585,FOP,Professor Adjunto,Em Exercício,Validada,31.89,26.31,0.0,0.0,5.58
+585,586,Reitoria,Professor Assistente,Em Exercício,Validada,85.4,30.75,8.18,4.81,41.66
+586,587,ICB,Professor Adjunto,Em Exercício,Validada,235.7,93.93,80.58,55.86,5.33
+587,588,Arcoverde,Professor Associado,Em Exercício,Validada,232.48,109.94,69.69,0.0,52.85
+588,589,Petrolina,Professor Adjunto,Em Exercício,Validada,191.96,98.01,69.57,16.75,7.63
+589,590,FCM,Professor Auxiliar,Em Exercício,Validada,114.63,48.11,12.57,0.0,53.95
+590,591,Mata Norte,Professor Adjunto,Em Exercício,Validada,182.12,79.62,48.02,20.19,34.29
+591,592,ICB,Professor Adjunto,Em Exercício,Validada,136.3,34.25,39.44,9.77,52.84
+592,593,FCM,Professor Adjunto,Em Exercício,Validada,91.29,46.76,26.74,16.72,1.07
+593,594,FENSG,Professor Adjunto,Em Exercício,Validada,235.8,107.48,58.63,20.74,48.95
+594,595,FCM,Professor Adjunto,Em Exercício,Validada,80.18,25.52,35.81,4.25,14.6
+595,596,FCM,Professor Adjunto,Em Exercício,Validada,119.1,79.49,20.21,1.59,17.81
+596,597,Garanhuns,Professor Adjunto,Em Exercício,Validada,99.51,60.06,20.44,7.21,11.8
+597,598,Mata Norte,Professor Adjunto,Em Exercício,Validada,30.87,19.6,5.69,0.0,5.58
+598,599,Petrolina,Professor Adjunto,Em Exercício,Validada,172.04,69.82,44.55,36.67,21.0
+599,600,Caruaru,Professor Assistente,Em Exercício,Validada,44.5,7.84,2.37,0.0,34.29
+600,601,FOP,Professor Associado,Em Exercício,Validada,375.82,84.7,123.18,107.19,60.75
+601,602,Petrolina,Professor Adjunto,Em Exercício,Validada,168.39,76.9,47.41,4.94,39.14
+602,603,Garanhuns,Professor Adjunto,Em Exercício,Validada,61.77,37.31,19.51,2.81,2.14
+603,604,FOP,Professor Adjunto,Em Exercício,Validada,49.31,29.86,10.43,0.0,9.02
+604,605,POLI,Professor Assistente,Afastamento Parcial (6 meses),Validada,61.8,40.13,0.0,0.0,1.07
+605,606,ESEF,Professor Associado,Em Exercício,Validada,236.01,77.73,123.99,0.0,34.29
+606,607,POLI,Professor Adjunto,Em Exercício,Validada,33.1,31.12,0.0,0.0,1.98
+607,608,POLI,Professor Adjunto,Em Exercício,Validada,20.6,18.0,2.6,0.0,0.0
+608,609,Mata Norte,Professor Assistente,Em Exercício,Validada,42.69,31.46,3.34,2.31,5.58
+609,610,Petrolina,Professor Adjunto,Em Exercício,Validada,218.6,102.49,33.46,59.03,23.62
+611,612,Petrolina,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+612,613,Caruaru,Professor Adjunto,Em Exercício,Validada,221.94,41.69,7.3,31.19,141.76
+613,614,FENSG,Professor Adjunto,Em Exercício,Validada,256.7,129.48,42.25,0.0,84.97
+614,615,Mata Norte,Professor Adjunto,Em Exercício,Validada,201.23,66.19,54.01,8.21,72.82
+615,616,Petrolina,Professor Adjunto,Em Exercício,Validada,65.16,38.07,24.04,0.0,3.05
+616,617,FOP,Professor Adjunto,Em Exercício,Validada,225.39,50.97,18.71,86.8,68.91
+617,618,ICB,Professor Adjunto,Em Exercício,Validada,74.14,32.89,21.55,4.59,15.11
+618,619,FOP,Professor Associado,Em Exercício,Validada,303.36,137.92,103.13,45.16,17.15
+619,620,Mata Norte,Professor Associado,Em Exercício,Validada,108.08,55.69,42.26,2.8,7.33
+620,621,ESEF,Professor Adjunto,Em Exercício,Validada,30.99,18.69,9.49,2.81,0.0
+621,622,Petrolina,Professor Auxiliar,Em Exercício,Validada,150.18,53.67,13.72,3.92,78.87
+622,623,Petrolina,Professor Adjunto,Em Exercício,Validada,113.29,34.2,3.36,22.61,53.12
+623,624,FCM,Professor Adjunto,Em Exercício,Validada,65.35,53.7,8.44,0.0,3.21
+625,626,Reitoria,Professor Adjunto,Em Exercício,Validada,164.81,26.5,45.54,38.13,54.64
+626,627,Mata Norte,Professor Adjunto,Em Exercício,Validada,176.7,98.52,60.47,8.22,9.49
+627,628,FCM,Professor Adjunto,Em Exercício,Validada,135.63,34.07,51.0,0.53,50.03
+628,629,FCM,Professor Assistente,Em Exercício,Validada,96.21,76.33,0.0,0.0,19.88
+629,630,POLI,Professor Adjunto,Em Exercício,Validada,25.21,20.11,0.0,0.0,5.1
+630,631,FCAP,Professor Adjunto,Em Exercício,Validada,289.14,78.26,116.9,50.9,43.08
+631,632,FCAP,Professor Adjunto,Em Exercício,Validada,227.32,98.31,45.1,23.72,60.19
+632,633,Arcoverde,Professor Adjunto,Em Exercício,Validada,77.34,35.77,27.34,13.16,1.07
+633,634,Petrolina,Professor Assistente,Afastamento Parcial (1 mês),Validada,88.8225,29.98,22.57,4.81,24.63
+634,635,Caruaru,Professor Assistente,Em Exercício,Validada,46.41,24.66,12.76,3.87,5.12
+635,636,ICB,Professor Adjunto,Em Exercício,Validada,32.33,20.95,11.38,0.0,0.0
+636,637,Serra Talhada,Professor Auxiliar,Em Exercício,Validada,167.51,39.44,54.92,32.0,41.15
+637,638,Mata Norte,Professor Adjunto,Em Exercício,Validada,115.84,65.32,42.84,4.63,3.05
+638,639,Garanhuns,Professor Assistente,Em Exercício,Validada,118.77,57.1,3.51,6.45,51.71
+639,640,ICB,Professor Associado,Em Exercício,Validada,229.56,79.58,72.46,28.82,48.7
+641,642,Caruaru,Professor Associado,Em Exercício,Validada,365.59,83.76,182.13,10.15,89.55
+642,643,Caruaru,Professor Adjunto,Afastamento Parcial (6 meses),Validada,155.01,17.63,10.77,18.17,56.77
+643,644,Caruaru,Professor Adjunto,Em Exercício,Validada,38.9,22.26,8.94,2.58,5.12
+644,645,FCM,Professor Adjunto,Em Exercício,Validada,180.73,64.33,80.21,22.24,13.95
+645,646,Petrolina,Professor Associado,Em Exercício,Validada,271.68,98.18,164.71,0.0,8.79
+646,647,POLI,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+647,648,Petrolina,Professor Adjunto,Em Exercício,Validada,232.71,90.58,67.33,2.05,72.75
+648,649,Petrolina,Professor Adjunto,Afastamento Parcial (5 meses),Validada,104.111,43.81,5.88,20.73,3.07
+649,650,FCM,Professor Adjunto,Em Exercício,Validada,108.34,58.89,0.0,47.31,2.14
+650,651,POLI,Professor Adjunto,Em Exercício,Validada,223.49,63.27,66.56,32.75,60.91
+651,652,FOP,Professor Adjunto,Em Exercício,Validada,191.37,104.97,38.81,46.52,1.07
+652,653,POLI,Professor Assistente,Em Exercício,Rejeitada,53.81,24.51,2.31,26.99,0.0
+654,655,FCM,Professor Adjunto,Em Exercício,Validada,125.92,84.63,19.47,0.0,21.82
+655,656,Mata Norte,Professor Adjunto,Em Exercício,Validada,117.91,82.19,25.22,0.0,10.5
+656,657,FOP,Professor Adjunto,Em Exercício,Validada,31.08,19.05,5.46,5.5,1.07
+657,658,POLI,Professor Adjunto,Em Exercício,Validada,58.01,43.92,10.04,0.0,4.05
+658,659,FCM,Professor Auxiliar,Em Exercício,Validada,118.03,60.66,8.2,25.2,23.97
+659,660,Reitoria,Professor Adjunto,Afastamento Parcial (5 meses),Validada,142.531,9.24,4.26,1.12,85.99
+660,661,Arcoverde,Professor Adjunto,Em Exercício,Validada,324.21,72.07,178.63,7.36,66.15
+661,662,FOP,Professor Adjunto,Em Exercício,Validada,60.71,53.79,2.24,0.53,4.15
+663,664,Petrolina,Professor Adjunto,Em Exercício,Validada,131.53,58.56,20.92,2.86,49.19
+664,665,Garanhuns,Professor Adjunto,Em Exercício,Validada,96.17,44.09,30.97,9.65,11.46
+665,666,Petrolina,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+666,667,Serra Talhada,Professor Assistente,Em Exercício,Validada,132.21,38.49,30.0,32.41,31.31
+667,668,Mata Norte,Professor Adjunto,Em Exercício,Validada,210.98,98.51,58.41,8.5,45.56
+668,669,Serra Talhada,Professor Assistente,Em Exercício,Validada,225.16,59.53,27.47,41.88,96.28
+669,670,FOP,Professor Adjunto,Em Exercício,Validada,236.04,102.37,14.61,49.08,69.98
+670,671,Petrolina,Professor Assistente,Em Exercício,Rejeitada,124.9,60.61,25.61,33.56,5.12
+671,672,Petrolina,Professor Adjunto,Em Exercício,Validada,186.34,83.8,84.33,10.65,7.56
+672,673,Petrolina,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+673,674,POLI,Professor Adjunto,Em Exercício,Validada,88.5,61.33,15.33,10.77,1.07
+675,676,Petrolina,Professor Associado,Em Exercício,Validada,254.18,85.74,113.15,16.09,39.2
+676,677,Garanhuns,Professor Assistente,Em Exercício,Validada,82.6,58.08,2.74,9.08,12.7
+677,678,FENSG,Professor Adjunto,Em Exercício,Validada,174.53,53.27,75.81,19.35,26.1
+678,679,Garanhuns,Professor Adjunto,Em Exercício,Validada,103.19,30.42,27.39,3.35,42.03
+679,680,FCM,Professor Associado,Em Exercício,Validada,140.23,46.7,44.1,10.42,39.01
+681,682,FENSG,Professor Adjunto,Em Exercício,Validada,139.98,70.87,51.46,15.51,2.14
+682,683,Garanhuns,Professor Adjunto,Em Exercício,Validada,155.01,73.61,47.58,17.52,16.3
+683,684,FENSG,Professor Associado,Em Exercício,Validada,166.25,111.11,49.92,0.0,5.22
+684,685,Petrolina,Professor Adjunto,Em Exercício,Validada,174.73,71.52,45.94,11.98,45.29
+685,686,FOP,Professor Associado,Em Exercício,Validada,186.84,92.9,74.67,19.27,0.0
+686,687,POLI,Professor Adjunto,Em Exercício,Validada,13.6,12.53,0.0,0.0,1.07
+687,688,Petrolina,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+689,690,POLI,Professor Adjunto,Em Exercício,Validada,98.08,43.28,2.24,5.57,46.99
+690,691,FENSG,Professor Adjunto,Em Exercício,Validada,123.35,54.53,7.52,23.33,37.97
+692,693,Arcoverde,Professor Assistente,Em Exercício,Validada,228.37,90.61,80.37,31.72,25.67
+693,694,Petrolina,Professor Adjunto,Em Exercício,Validada,139.26,57.79,23.23,23.95,34.29
+694,695,FCAP,Professor Adjunto,Em Exercício,Validada,121.43,29.42,11.13,11.49,69.39
+695,696,Petrolina,Professor Adjunto,Em Exercício,Validada,106.28,69.45,19.21,0.0,17.62
+696,697,FOP,Professor Adjunto,Em Exercício,Validada,54.89,36.85,18.04,0.0,0.0
+697,698,Reitoria,Professor Adjunto,Em Exercício,Validada,168.72,47.38,9.83,0.0,111.51
+700,701,POLI,Professor Associado,Em Exercício,Validada,79.71,27.17,16.27,0.0,36.27
+702,703,Petrolina,Professor Adjunto,Em Exercício,Validada,121.5,53.29,44.82,4.76,18.63
+703,704,FOP,Professor Associado,Em Exercício,Validada,312.3,162.52,104.94,20.86,23.98
+704,705,Garanhuns,Professor Adjunto,Em Exercício,Validada,132.81,60.34,30.05,14.23,28.19
+705,706,Petrolina,Professor Adjunto,Em Exercício,Validada,102.2,51.56,38.2,2.63,9.81
+706,707,FCM,Professor Adjunto,Em Exercício,Validada,66.44,31.78,15.41,5.52,13.73
+707,708,FOP,Professor Assistente,Em Exercício,Validada,42.16,35.89,0.0,0.0,6.27
+709,710,ICB,Professor Associado,Em Exercício,Validada,168.62,49.62,51.52,2.05,65.43
+710,711,Mata Norte,Professor Adjunto,Em Exercício,Validada,172.84,63.67,48.55,17.76,42.86
+711,712,ICB,Professor Adjunto,Em Exercício,Validada,86.44,34.14,27.25,11.84,13.21
+712,713,Arcoverde,Professor Adjunto,Em Exercício,Validada,264.59,82.14,121.24,38.5,22.71
+713,714,Serra Talhada,Professor Adjunto,Em Exercício,Validada,196.44,63.1,82.23,8.54,42.57
+714,715,POLI,Professor Associado,Em Exercício,Validada,178.11,90.92,55.1,17.57,14.52
+715,716,POLI,Professor Adjunto,Em Exercício,Validada,105.18,49.58,14.0,2.8,38.8
+716,717,FCM,Professor Assistente,Em Exercício,Validada,75.86,69.58,5.21,0.0,1.07
+717,718,POLI,Professor Adjunto,Em Exercício,Validada,113.13,40.74,27.93,0.0,44.46
+718,719,Garanhuns,Professor Assistente,Em Exercício,Validada,40.69,12.0,5.13,18.44,5.12
+719,720,Caruaru,Professor Adjunto,Em Exercício,Validada,86.48,33.52,1.67,2.81,48.48
+720,721,FOP,Professor Adjunto,Em Exercício,Validada,106.87,72.66,20.67,2.08,11.46
+721,722,Petrolina,Professor Associado,Em Exercício,Validada,313.05,120.85,127.37,0.0,64.83
+722,723,ESEF,Professor Adjunto,Em Exercício,Validada,280.24,74.55,37.76,71.73,96.2
+723,724,Petrolina,Professor Adjunto,Em Exercício,Validada,94.68,40.48,11.34,2.08,40.78
+724,725,POLI,Professor Adjunto,Em Exercício,Validada,207.7,67.36,50.93,14.85,74.56
+725,726,Caruaru,Professor Adjunto,Em Exercício,Validada,78.29,40.0,2.73,31.44,4.12
+726,727,FOP,Professor Adjunto,Em Exercício,Validada,66.63,47.21,9.19,4.88,5.35
+727,728,Petrolina,Professor Adjunto,Em Exercício,Validada,67.67,49.67,9.8,6.22,1.98
+728,729,Reitoria,Professor Assistente,Em Exercício,Validada,100.54,23.0,8.17,43.7,25.67
+729,730,ICB,Professor Adjunto,Em Exercício,Validada,79.53,52.78,23.24,0.0,3.51
+731,732,FOP,Professor Adjunto,Em Exercício,Validada,193.46,96.5,2.43,90.43,4.1
+732,733,Serra Talhada,Professor Assistente,Em Exercício,Validada,89.03,37.06,38.36,7.48,6.13
+733,734,Garanhuns,Professor Adjunto,Em Exercício,Validada,218.81,93.99,44.47,7.64,72.71
+734,735,FENSG,Professor Adjunto,Em Exercício,Validada,202.76,47.27,19.41,54.8,81.28
+735,736,Petrolina,Professor Assistente,Em Exercício,Validada,48.88,46.17,0.0,0.0,2.71
+736,737,Mata Norte,Professor Adjunto,Em Exercício,Validada,115.2,50.64,57.58,6.98,0.0
+737,738,ICB,Professor Adjunto,Em Exercício,Validada,28.0,26.93,0.0,0.0,1.07
+738,739,POLI,Professor Adjunto,Em Exercício,Validada,112.75,44.24,21.31,33.47,13.73
+739,740,FCM,Professor Adjunto,Afastamento Parcial (6 meses),Validada,50.535,16.8,3.54,3.35,10.0
+741,742,FENSG,Professor Adjunto,Em Exercício,Validada,63.54,24.0,8.9,0.0,30.64
+742,743,FOP,Professor Associado,Em Exercício,Validada,112.91,76.68,30.07,4.02,2.14
+743,744,FOP,Professor Associado,Em Exercício,Validada,289.87,88.3,157.4,0.0,44.17
+744,745,Mata Norte,Professor Adjunto,Em Exercício,Validada,199.08,73.51,61.16,6.26,58.15
+745,746,FENSG,Professor Adjunto,Em Exercício,Validada,203.15,29.96,42.78,13.96,116.45
+746,747,POLI,Professor Associado,Em Exercício,Validada,138.08,42.24,40.37,2.05,53.42
+747,748,POLI,Professor Assistente,Em Exercício,Validada,27.22,26.15,0.0,0.0,1.07
+748,749,POLI,Professor Adjunto,Em Exercício,Validada,43.26,35.7,0.0,0.0,7.56
+749,750,POLI,Professor Adjunto,Em Exercício,Validada,105.06,25.4,78.59,0.0,1.07
+750,751,POLI,Professor Adjunto,Em Exercício,Validada,132.61,73.37,22.81,0.0,36.43
+751,752,FCM,Professor Assistente,Em Exercício,Validada,79.6,60.26,5.85,7.05,6.44
+752,753,POLI,Professor Associado,Em Exercício,Validada,137.05,62.67,64.38,0.0,10.0
+753,754,FCAP,Professor Auxiliar,Em Exercício,Validada,47.72,37.2,0.0,10.52,0.0
+754,755,FCM,Professor Adjunto,Em Exercício,Validada,68.52,43.35,11.51,13.66,0.0
+755,756,Mata Norte,Professor Adjunto,Em Exercício,Validada,55.67,15.77,6.66,24.25,8.99
+756,757,Mata Sul,Professor Adjunto,Em Exercício,Validada,85.58,47.08,18.36,11.12,9.02
+757,758,Petrolina,Professor Adjunto,Em Exercício,Validada,131.68,50.09,28.64,2.08,50.87
+758,759,ICB,Professor Adjunto,Em Exercício,Validada,173.53,52.69,50.24,9.67,60.93
+759,760,FCM,Professor Adjunto,Em Exercício,Validada,121.62,82.07,35.77,0.0,3.78
+760,761,Garanhuns,Professor Adjunto,Em Exercício,Validada,159.41,43.29,24.31,0.0,91.81
+762,763,FCM,Professor Adjunto,Em Exercício,Validada,78.27,31.31,35.54,0.0,11.42
+763,764,Petrolina,Professor Adjunto,Em Exercício,Validada,112.4,38.07,16.7,12.28,45.35
+764,765,ICB,Professor Adjunto,Em Exercício,Validada,249.11,44.08,107.29,71.75,25.99
+765,766,FENSG,Professor Associado,Em Exercício,Validada,347.94,134.08,77.78,36.4,99.68
+766,767,POLI,Professor Associado,Em Exercício,Validada,162.81,94.46,66.21,0.0,2.14
+767,768,ESEF,Professor Adjunto,Em Exercício,Validada,40.97,29.08,8.01,2.81,1.07
+768,769,Garanhuns,Professor Associado,Em Exercício,Validada,192.62,77.97,68.38,27.76,18.51
+769,770,Garanhuns,Professor Assistente,Em Exercício,Validada,187.18,87.51,48.58,12.18,38.91
+771,772,Caruaru,Professor Adjunto,Em Exercício,Validada,100.08,37.55,9.41,25.08,28.04
+772,773,Arcoverde,Professor Adjunto,Em Exercício,Validada,243.22,66.39,111.69,9.96,55.18
+773,774,POLI,Professor Associado,Em Exercício,Validada,68.22,42.52,25.7,0.0,0.0
+774,775,Mata Norte,Professor Assistente,Em Exercício,Validada,92.66,16.37,2.83,5.88,67.58
+775,776,Garanhuns,Professor Adjunto,Em Exercício,Validada,292.63,152.98,87.36,32.91,19.38
+776,777,Mata Norte,Professor Adjunto,Em Exercício,Validada,95.35,45.87,30.22,2.54,16.72
+777,778,Petrolina,Professor Adjunto,Em Exercício,Validada,238.91,125.12,84.21,6.9,22.68
+778,779,FENSG,Professor Adjunto,Em Exercício,Validada,170.6,91.48,52.45,0.0,26.67
+779,780,Reitoria,Professor Associado,Em Exercício,Validada,244.2,114.6,59.29,2.81,67.5
+780,781,POLI,Professor Adjunto,Em Exercício,Validada,45.9,31.92,10.91,0.0,3.07
+782,783,Petrolina,Professor Associado,Em Exercício,Validada,228.2,74.85,68.14,2.8,82.41
+783,784,Petrolina,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+784,785,Garanhuns,Professor Adjunto,Em Exercício,Validada,138.34,91.56,22.58,17.03,7.17
+785,786,Petrolina,Professor Adjunto,Em Exercício,Validada,214.37,131.26,56.15,0.0,26.96
+786,787,Salgueiro,Professor Adjunto,Em Exercício,Validada,197.04,38.97,15.02,23.41,119.64
+787,788,Reitoria,Professor Assistente,Em Readaptação,Validada,6.5,,,,
+788,789,ESEF,Professor Adjunto,Em Exercício,Validada,23.1,19.84,1.12,0.0,2.14
+789,790,FOP,Professor Assistente,Em Exercício,Validada,58.22,44.44,3.85,0.53,9.4
+790,791,FOP,Professor Adjunto,Em Exercício,Validada,163.23,79.68,7.69,18.82,57.04
+791,792,Caruaru,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+792,793,Petrolina,Professor Adjunto,Em Exercício,Validada,199.63,93.03,84.45,10.08,12.07
+793,794,Petrolina,Professor Adjunto,Em Exercício,Validada,202.16,48.92,62.16,47.59,43.49
+794,795,ESEF,Professor Adjunto,Em Exercício,Validada,124.59,78.97,21.55,15.05,9.02
+795,796,Petrolina,Professor Adjunto,Em Exercício,Validada,155.49,77.83,70.71,0.0,6.95
+796,797,Petrolina,Professor Adjunto,Afastamento Parcial (6 meses),Validada,84.54,21.67,17.66,9.08,7.95
+797,798,Mata Norte,Professor Adjunto,Em Exercício,Validada,89.84,47.62,19.1,10.32,12.8
+798,799,ICB,Professor Associado,Em Exercício,Validada,181.97,78.66,64.51,0.0,38.8
+799,800,Serra Talhada,Professor Auxiliar,Em Exercício,Validada,146.08,29.76,100.44,15.88,0.0
+800,801,Reitoria,Professor Adjunto,Em Exercício,Validada,0.0,9.6,0.0,0.0,12.97
+801,802,FOP,Professor Associado,Em Exercício,Validada,104.87,55.34,45.31,2.08,2.14
+802,803,POLI,Professor Auxiliar,Em Exercício,Validada,33.81,25.79,0.0,0.0,8.02
+803,804,POLI,Professor Adjunto,Em Exercício,Validada,33.91,32.31,0.0,0.53,1.07
+804,805,Garanhuns,Professor Auxiliar,Em Exercício,Validada,37.42,25.12,12.3,0.0,0.0
+806,807,FCM,Professor Assistente,Em Exercício,Validada,73.96,65.42,3.87,2.81,1.86
+807,808,FOP,Professor Adjunto,Em Exercício,Validada,95.34,63.46,17.01,3.8,11.07
+808,809,FENSG,Professor Assistente,Em Exercício,Validada,109.73,53.44,30.99,0.0,25.3
+809,810,Mata Norte,Professor Adjunto,Em Exercício,Validada,83.31,59.25,11.47,11.8,0.79
+810,811,FCAP,Professor Adjunto,Em Exercício,Validada,159.12,53.33,65.88,17.72,22.19
+811,812,Garanhuns,Professor Adjunto,Em Exercício,Validada,196.85,118.01,56.9,19.23,2.71
+812,813,Reitoria,Professor Adjunto,Em Exercício,Validada,139.58,8.86,10.8,7.66,112.26
+813,814,Reitoria,Professor Adjunto,Em Exercício,Validada,112.5,11.19,3.72,0.0,97.59
+814,815,FENSG,Professor Adjunto,Em Exercício,Validada,115.95,37.93,18.8,13.27,45.95
+815,816,FOP,Professor Adjunto,Em Exercício,Validada,130.59,40.4,11.85,42.98,35.36
+816,817,POLI,Professor Adjunto,Em Exercício,Validada,62.14,43.53,13.19,3.28,2.14
+818,819,Petrolina,Professor Adjunto,Em Exercício,Validada,330.46,119.41,134.11,8.35,68.59
+819,820,Petrolina,Professor Associado,Afastamento Total,Validada,6.5,,,,
+820,821,FOP,Professor Associado,Em Exercício,Validada,202.33,99.24,90.2,9.68,3.21
+821,822,Mata Norte,Professor Adjunto,Em Exercício,Validada,238.29,61.94,29.91,82.86,63.58
+822,823,FENSG,Professor Adjunto,Em Exercício,Validada,198.25,81.24,39.63,18.63,58.75
+823,824,Petrolina,Professor Assistente,Em Exercício,Validada,53.42,35.05,6.69,2.05,9.63
+824,825,Garanhuns,Professor Adjunto,Em Exercício,Validada,169.68,68.4,43.3,0.0,57.98
+825,826,Serra Talhada,Professor Assistente,Em Exercício,Validada,23.38,17.27,0.53,0.0,5.58
+826,827,POLI,Professor Adjunto,Em Exercício,Validada,67.41,21.9,5.6,5.62,34.29
+827,828,Salgueiro,Professor Assistente,Em Exercício,Validada,33.09,31.01,2.08,0.0,0.0
+828,829,FENSG,Professor Adjunto,Em Exercício,Validada,308.64,139.79,130.72,10.16,27.97
+829,830,FENSG,Professor Adjunto,Em Exercício,Validada,182.68,90.93,33.0,10.53,48.22
+830,831,FENSG,Professor Assistente,Em Exercício,Validada,109.49,63.24,16.82,8.34,21.09
+832,833,Garanhuns,Professor Adjunto,Em Exercício,Validada,192.57,99.87,51.2,17.26,24.24
+833,834,Petrolina,Professor Adjunto,Em Exercício,Validada,225.62,65.79,90.18,0.0,69.65
+834,835,POLI,Professor Associado,Em Exercício,Validada,211.54,74.49,95.51,8.95,32.59
+835,836,ESEF,Professor Adjunto,Em Exercício,Validada,50.28,30.28,6.62,5.68,7.7
+837,838,POLI,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+838,839,Caruaru,Professor Adjunto,Em Exercício,Validada,289.9,103.13,88.23,8.55,89.99
+839,840,ICB,Professor Assistente,Em Exercício,Rejeitada,112.12,78.01,1.15,16.52,16.44
+840,841,POLI,Professor Associado,Em Exercício,Validada,269.84,137.04,59.98,2.08,70.74
+841,842,Petrolina,Professor Assistente,Em Exercício,Validada,95.74,55.13,20.6,7.76,12.25
+842,843,Garanhuns,Professor Adjunto,Em Exercício,Validada,34.95,13.51,5.09,0.0,16.35
+844,845,ICB,Professor Associado,Em Exercício,Validada,127.01,58.74,56.85,6.91,4.51
+845,846,POLI,Professor Adjunto,Em Exercício,Validada,46.06,43.28,1.71,0.0,1.07
+846,847,POLI,Professor Adjunto,Em Exercício,Validada,34.16,32.02,0.0,0.0,2.14
+847,848,Arcoverde,Professor Adjunto,Em Exercício,Validada,76.23,46.13,8.6,21.5,0.0
+848,849,Garanhuns,Professor Auxiliar,Em Exercício,Validada,40.93,33.6,0.0,0.0,7.33
+849,850,POLI,Professor Assistente,Em Exercício,Validada,137.98,52.43,13.11,15.29,57.15
+850,851,ICB,Professor Adjunto,Em Exercício,Validada,103.6,28.11,55.71,5.18,14.6
+851,852,POLI,Professor Adjunto,Em Exercício,Validada,61.44,45.72,3.89,4.27,7.56
+852,853,Reitoria,Professor Adjunto,Em Exercício,Validada,206.42,55.91,55.64,15.01,79.86
+853,854,Petrolina,Professor Adjunto,Em Exercício,Validada,190.08,55.41,93.69,0.53,40.45
+855,856,POLI,Professor Assistente,Em Exercício,Validada,141.39,54.86,23.94,13.62,48.97
+856,857,Caruaru,Professor Assistente,Afastamento Parcial (3 meses),Validada,106.475,27.08,52.35,4.68,1.07
+857,858,ESEF,Professor Adjunto,Afastamento Parcial (6 meses),Validada,400.905,103.43,132.36,31.48,0.0
+858,859,Petrolina,Professor Adjunto,Em Exercício,Validada,395.77,170.37,177.06,16.61,31.73
+859,860,POLI,Professor Assistente,Em Exercício,Validada,69.59,17.22,1.59,0.0,50.78
+860,861,FCM,Professor Adjunto,Em Exercício,Validada,175.66,66.66,27.32,25.24,56.44
+861,862,ICB,Professor Adjunto,Em Exercício,Validada,59.76,25.47,22.67,6.04,5.58
+862,863,Petrolina,Professor Adjunto,Em Exercício,Validada,0.0,27.61,13.44,3.8,7.49
+863,864,Arcoverde,Professor Adjunto,Em Exercício,Rejeitada,51.38,20.42,6.64,7.27,2.05
+864,865,Serra Talhada,Professor Auxiliar,Em Exercício,Rejeitada,90.52,84.6,0.53,5.39,0.0
+865,866,Petrolina,Professor Adjunto,Em Exercício,Validada,190.12,87.1,43.75,8.54,50.73
+866,867,Serra Talhada,Professor Assistente,Em Exercício,Validada,94.82,38.03,25.84,26.83,4.12
+867,868,ICB,Professor Adjunto,Em Exercício,Validada,232.17,69.82,73.34,10.84,78.17
+868,869,Garanhuns,Professor Adjunto,Em Exercício,Validada,295.57,110.47,65.06,44.02,76.02
+869,870,Arcoverde,Professor Assistente,Em Exercício,Validada,94.09,47.05,13.31,10.79,22.94
+870,871,Petrolina,Professor Adjunto,Em Exercício,Validada,218.39,58.28,56.48,6.15,97.48
+871,872,FCAP,Professor Adjunto,Em Exercício,Validada,49.65,19.92,10.8,9.71,9.22
+872,873,FCM,Professor Auxiliar,Em Exercício,Validada,111.93,90.66,2.05,8.22,11.0
+873,874,FCAP,Professor Adjunto,Em Exercício,Validada,88.58,45.07,34.62,2.8,6.09
+874,875,ESEF,Professor Assistente,Em Exercício,Validada,180.93,63.26,80.7,31.75,5.22
+875,876,ESEF,Professor Adjunto,Em Exercício,Validada,188.89,64.17,53.43,12.16,59.13
+876,877,ESEF,Professor Assistente,Em Exercício,Validada,96.76,24.05,17.61,6.21,48.89
+877,878,ESEF,Professor Assistente,Em Exercício,Validada,159.89,50.31,42.25,3.73,63.6
+881,882,FCAP,Professor Adjunto,Em Exercício,Validada,65.43,43.3,0.53,14.27,7.33
+882,883,FCAP,Professor Adjunto,Em Exercício,Validada,57.64,7.84,0.0,0.0,49.8
+883,884,FCAP,Professor Adjunto,Em Exercício,Validada,138.72,25.87,35.15,12.51,65.19
+884,885,FCAP,Professor Adjunto,Em Exercício,Validada,47.86,23.63,13.66,7.52,3.05
+886,887,FCAP,Professor Adjunto,Em Exercício,Validada,49.71,26.78,2.62,0.0,20.31
+887,888,FCAP,Professor Adjunto,Em Exercício,Validada,73.58,40.25,19.67,2.05,11.61
+891,892,FCM,Professor Adjunto,Em Exercício,Validada,334.46,145.9,98.44,29.89,60.23
+895,896,FCM,Professor Adjunto,Em Exercício,Validada,184.19,74.28,63.56,26.33,20.02
+898,899,FCM,Professor Auxiliar,Em Exercício,Validada,43.56,24.44,7.8,11.32,0.0
+899,900,FCM,Professor Adjunto,Em Exercício,Validada,179.1,81.98,95.52,0.53,1.07
+901,902,FCM,Professor Assistente,Em Exercício,Validada,99.74,74.27,20.89,0.53,4.05
+902,903,FCM,Professor Adjunto,Em Exercício,Validada,71.37,30.15,31.95,4.76,4.51
+903,904,FCM,Professor Adjunto,Em Exercício,Validada,34.29,17.92,16.37,0.0,0.0
+911,912,Garanhuns,Professor Adjunto,Em Exercício,Validada,170.61,81.1,26.63,17.59,45.29
+912,913,Garanhuns,Professor Adjunto,Em Exercício,Validada,126.41,75.59,40.16,7.89,2.77
+913,914,POLI,Professor Adjunto,Em Exercício,Validada,273.71,66.51,108.33,70.89,27.98
+914,915,Garanhuns,Professor Adjunto,Afastamento Parcial (3 meses),Validada,240.25,47.03,129.45,14.93,0.79
+915,916,Garanhuns,Professor Adjunto,Em Exercício,Validada,127.28,45.79,34.23,4.36,42.9
+916,917,Garanhuns,Professor Auxiliar,Em Exercício,Rejeitada,129.82,44.31,42.09,42.15,1.27
+917,918,Garanhuns,Professor Adjunto,Em Exercício,Validada,269.85,91.01,94.22,26.47,58.15
+918,919,Garanhuns,Professor Adjunto,Em Exercício,Validada,141.56,60.72,34.98,9.91,35.95
+919,920,Garanhuns,Professor Adjunto,Em Exercício,Validada,103.35,40.02,13.47,0.0,49.86
+920,921,Garanhuns,Professor Adjunto,Em Exercício,Validada,160.48,62.13,46.76,10.93,40.66
+921,922,Garanhuns,Professor Adjunto,Em Exercício,Validada,270.32,85.9,72.8,50.3,61.32
+922,923,Garanhuns,Professor Auxiliar,Em Exercício,Validada,33.74,18.0,3.34,7.05,5.35
+923,924,Garanhuns,Professor Auxiliar,Em Exercício,Validada,44.71,42.0,0.0,0.0,2.71
+924,925,Garanhuns,Professor Adjunto,Em Exercício,Validada,151.1,90.83,25.99,29.37,4.91
+925,926,Garanhuns,Professor Adjunto,Em Exercício,Validada,158.18,67.79,36.22,0.53,53.64
+926,927,Garanhuns,Professor Adjunto,Em Exercício,Validada,143.08,64.07,17.54,2.8,58.67
+927,928,Garanhuns,Professor Adjunto,Em Exercício,Validada,192.87,109.15,56.97,17.26,9.49
+928,929,Garanhuns,Professor Adjunto,Em Exercício,Validada,139.56,74.25,23.43,2.05,39.83
+929,930,Garanhuns,Professor Adjunto,Em Exercício,Validada,115.45,41.6,65.75,5.17,2.93
+930,931,Garanhuns,Professor Adjunto,Em Exercício,Validada,116.65,41.24,6.52,3.14,65.75
+940,941,Arcoverde,Professor Assistente,Em Exercício,Validada,77.26,22.16,13.15,3.41,38.54
+941,942,Arcoverde,Professor Adjunto,Em Exercício,Validada,90.75,31.17,51.53,6.98,1.07
+942,943,Arcoverde,Professor Adjunto,Em Exercício,Validada,170.11,44.9,72.59,32.92,19.7
+944,945,Arcoverde,Professor Adjunto,Afastamento Parcial (3 meses),Validada,204.5,61.64,30.48,24.22,47.26
+945,946,Arcoverde,Professor Adjunto,Afastamento Parcial (2 meses),Validada,226.52,51.45,91.89,16.61,34.21
+946,947,Arcoverde,Professor Assistente,Em Exercício,Validada,107.71,62.07,34.88,0.53,10.23
+947,948,Arcoverde,Professor Assistente,Em Exercício,Validada,72.8,30.06,32.32,7.65,2.77
+952,953,Salgueiro,Professor Adjunto,Em Exercício,Validada,139.04,46.09,65.09,13.8,14.06
+953,954,Salgueiro,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+954,955,Salgueiro,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+955,956,Salgueiro,Professor Assistente,Afastamento Total,Validada,6.5,,,,
+956,957,Salgueiro,Professor Adjunto,Em Exercício,Validada,367.21,117.41,123.41,52.97,73.42
+957,958,Salgueiro,Professor Adjunto,Em Exercício,Validada,537.98,182.45,189.09,54.57,111.87
+959,960,Petrolina,Professor Adjunto,Em Exercício,Validada,202.17,82.64,68.16,13.3,38.07
+960,961,Petrolina,Professor Adjunto,Em Exercício,Validada,170.45,78.19,48.88,0.0,43.38
+961,962,Petrolina,Professor Adjunto,Em Exercício,Validada,252.39,84.96,106.0,45.48,15.95
+962,963,Petrolina,Professor Adjunto,Em Exercício,Validada,238.85,103.16,71.51,15.76,48.42
+963,964,Petrolina,Professor Adjunto,Em Exercício,Validada,186.24,127.32,13.7,0.0,45.22
+964,965,Petrolina,Professor Adjunto,Em Exercício,Validada,170.0,67.64,58.81,0.0,43.55
+965,966,Petrolina,Professor Adjunto,Em Exercício,Validada,109.3,47.01,10.93,5.61,45.75
+966,967,Petrolina,Professor Adjunto,Em Exercício,Validada,69.66,45.49,2.08,12.0,10.09
+967,968,Petrolina,Professor Adjunto,Em Exercício,Validada,101.27,48.79,19.75,20.66,12.07
+968,969,Petrolina,Professor Adjunto,Em Exercício,Validada,148.74,58.62,80.24,0.0,9.88
+969,970,Petrolina,Professor Adjunto,Em Exercício,Validada,155.31,108.25,17.95,28.04,1.07
+970,971,Petrolina,Professor Assistente,Afastamento Parcial (2 meses),Validada,44.0067,21.96,6.97,7.72,1.07
+971,972,Petrolina,Professor Adjunto,Em Exercício,Validada,157.97,90.48,25.41,27.24,14.84
+972,973,Petrolina,Professor Adjunto,Em Exercício,Validada,169.42,73.83,28.82,32.48,34.29
+973,974,Petrolina,Professor Adjunto,Em Exercício,Validada,50.88,31.76,10.68,2.86,5.58
+981,982,FOP,Professor Adjunto,Em Exercício,Validada,137.96,42.6,31.35,5.52,58.49
+982,983,FOP,Professor Adjunto,Em Exercício,Validada,255.36,123.19,59.19,51.51,21.47
+983,984,FOP,Professor Adjunto,Em Exercício,Validada,68.4,55.29,7.73,2.71,2.67
+984,985,FOP,Professor Adjunto,Em Exercício,Validada,167.03,46.32,29.06,22.74,68.91
+988,989,Mata Norte,Professor Adjunto,Em Exercício,Validada,56.46,27.89,25.45,2.05,1.07
+989,990,Mata Norte,Professor Adjunto,Em Exercício,Validada,209.2,82.23,61.26,24.61,41.1
+990,991,Mata Norte,Professor Assistente,Em Exercício,Validada,77.28,26.18,1.71,8.71,40.68
+991,992,Mata Norte,Professor Adjunto,Em Exercício,Validada,103.84,70.95,17.22,0.0,15.67
+992,993,Mata Norte,Professor Adjunto,Em Exercício,Validada,180.81,109.42,64.93,5.39,1.07
+993,994,Mata Norte,Professor Adjunto,Em Exercício,Validada,112.07,49.39,4.91,2.63,55.14
+994,995,Garanhuns,Professor Adjunto,Em Exercício,Validada,152.55,85.15,19.9,11.34,36.16
+995,996,Mata Norte,Professor Adjunto,Em Exercício,Validada,84.15,26.64,10.77,8.77,37.97
+996,997,Mata Norte,Professor Adjunto,Em Exercício,Validada,281.89,149.51,65.42,12.8,54.16
+997,998,Mata Norte,Professor Adjunto,Em Exercício,Validada,212.63,65.04,99.4,27.91,20.28
+998,999,Mata Norte,Professor Adjunto,Em Exercício,Validada,133.91,84.63,29.1,0.0,20.18
+1004,1005,Mata Sul,Professor Adjunto,Em Exercício,Validada,221.06,100.07,34.72,15.45,70.82
+1007,1008,POLI,Professor Adjunto,Em Exercício,Validada,179.2,107.9,19.89,0.0,51.41
+1008,1009,POLI,Professor Adjunto,Em Exercício,Validada,130.22,96.76,19.9,6.28,7.28
+1009,1010,POLI,Professor Assistente,Em Exercício,Validada,54.22,35.98,0.0,0.0,18.24
+1010,1011,POLI,Professor Assistente,Em Exercício,Validada,47.12,44.34,1.71,0.0,1.07
+1011,1012,POLI,Professor Adjunto,Em Exercício,Validada,213.9,108.8,47.65,13.07,44.38
+1012,1013,POLI,Professor Assistente,Em Exercício,Validada,92.18,36.17,0.0,0.0,56.01
+1013,1014,POLI,Professor Assistente,Em Exercício,Validada,20.27,19.2,0.0,0.0,1.07
+1014,1015,POLI,Professor Adjunto,Afastamento Total,Validada,6.5,,,,
+1018,1019,Serra Talhada,Professor Adjunto,Em Exercício,Validada,353.2,58.15,224.08,32.05,38.92
+1020,1021,Serra Talhada,Professor Adjunto,Em Exercício,Validada,172.13,38.38,73.24,27.39,33.12
