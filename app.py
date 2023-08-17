@@ -6,11 +6,7 @@ from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
 
-df = pd.read_csv('/mnt/extra-drive/Coding/IC/df_sem_pendentes.csv')
-df_number = pd.read_csv('df_sem_pendentes_number.csv')
-
-df['Nota_RAD'] = df['Nota_RAD'].str.replace(",", ".")
-df['Nota_RAD'] = pd.to_numeric(df['Nota_RAD'])
+df = pd.read_csv('df_sem_pendentes_number.csv')
 
 averageGradePerUnit = df.groupby('UNIDADE')['Nota_RAD'].mean().reset_index()
 averageGradePerUnit.rename(columns={'Nota_RAD': 'Media'}, inplace=True)
@@ -95,7 +91,7 @@ app.layout = html.Div([
 )
 
 def update_output(selected_option, dimension):
-    temp = df_number[df_number["UNIDADE"] == selected_option]
+    temp = df[df["UNIDADE"] == selected_option]
     fig = px.box(temp, y=dimension)
     return fig
 
@@ -106,7 +102,7 @@ def update_output(selected_option, dimension):
 )
 
 def update_output_violin(selected_option, dimension):
-    temp = df_number[df_number["UNIDADE"] == selected_option]
+    temp = df[df["UNIDADE"] == selected_option]
     fig = px.violin(temp, y=dimension)
     return fig
 
