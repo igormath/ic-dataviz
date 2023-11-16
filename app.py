@@ -29,93 +29,24 @@ def generate_table(dataframe, max_rows=10):
 
 
 app = Dash(__name__)
+app._favicon = "favicon.ico"
+app.title = "RAD - Universidade de Pernambuco"
 
-app.layout = html.Div([
-    html.H1('Tabela IC'),
-
-    generate_table(df, 20),
+app.layout = html.Main([
+    html.H1('Protótipo RAD', className="page-title"),
     
-    dcc.Graph(
-        id='grafico_cumulativo',
-        figure=fig_cumulative
-    ),
-
-    dcc.Graph(
-        id='grafico_media',
-        figure=fig_average
-    ),
-    
-    dcc.Dropdown(
-        id='select-option',
-        options=[
-            {'label': 'Arcoverde', 'value': 'Arcoverde'},
-            {'label': 'Caruaru', 'value': 'Caruaru'},
-            {'label': 'ESEF', 'value': 'ESEF'},
-            {'label': 'FCAP', 'value': 'FCAP'},
-            {'label': 'FCM', 'value': 'FCM'},
-            {'label': 'FENSG', 'value': 'FENSG'},
-            {'label': 'FOP', 'value': 'FOP'},
-            {'label': 'Garanhuns', 'value': 'Garanhuns'},
-            {'label': 'ICB', 'value': 'ICB'},
-            {'label': 'Mata Norte', 'value': 'Mata Norte'},
-            {'label': 'Mata Sul', 'value': 'Mata Sul'},
-            {'label': 'POLI', 'value': 'POLI'},
-            {'label': 'Petrolina', 'value': 'Petrolina'},
-            {'label': 'Reitoria', 'value': 'Reitoria'},
-            {'label': 'Salgueiro', 'value': 'Salgueiro'},
-            {'label': 'Serra Talhada', 'value': 'Serra Talhada'},
-            ],
-        value='',
-        placeholder=''
-    ),
-
-    html.P("Dimensão: "),
-
-    dcc.Checklist(
-        id='dimension',
-        options= ['Nota_RAD', 'Ensino', 'Pesquisa', 'Extensão', 'Gestão'],
-        value=['Nota_RAD'],
-        inline=True
-    ),
-
-    dcc.Graph(id='graph'),
-
-    html.H4("Violin plot: "),
-
-    dcc.Graph(id='graph-violin'),
+    html.P('Box plot das quatro dimensões do Relatório de Atividades Docentes da Universidade de Pernambuco, agrupados por unidade de ensino.', className="page-paragraph"),
 
     dcc.Checklist(
         id='unity',
         options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
         value=[''],
-        inline=True
+        inline=True,
+        className="page-checklist"
     ),
 
     dcc.Graph(id='grouped-boxplot'),
 ])
-
-# BOXPLOT
-@app.callback(
-    Output("graph", "figure"),    
-    Input("select-option", "value"),
-    Input("dimension", "value")
-)
-
-def update_output(selected_option, dimension):
-    temp = df[df["UNIDADE"] == selected_option]
-    fig = px.box(temp, y=dimension)
-    return fig
-
-@app.callback(
-    Output("graph-violin", "figure"),    
-    Input("select-option", "value"),
-    Input("dimension", "value")
-)
-
-def update_output_violin(selected_option, dimension):
-    temp = df[df["UNIDADE"] == selected_option]
-    fig = px.violin(temp, y=dimension)
-    return fig
 
 @app.callback(
     Output("grouped-boxplot", "figure"),
