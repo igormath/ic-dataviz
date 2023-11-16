@@ -29,6 +29,7 @@ def generate_table(dataframe, max_rows=10):
 
 
 app = Dash(__name__)
+server = app.server
 app._favicon = "favicon.ico"
 app.title = "RAD - Universidade de Pernambuco"
 
