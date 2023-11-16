@@ -5,6 +5,7 @@ from dash import Dash, html, dcc
 from dash.dependencies import Input, Output
 import pandas as pd
 import plotly.express as px
+import plotly.graph_objects as go
 
 df = pd.read_csv('df_sem_pendentes_number.csv')
 
@@ -81,9 +82,19 @@ app.layout = html.Div([
 
     html.H4("Violin plot: "),
 
-    dcc.Graph(id='graph-violin')
+    dcc.Graph(id='graph-violin'),
+
+    dcc.Checklist(
+        id='unity',
+        options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
+        value=[''],
+        inline=True
+    ),
+
+    dcc.Graph(id='grouped-boxplot'),
 ])
 
+# BOXPLOT
 @app.callback(
     Output("graph", "figure"),    
     Input("select-option", "value"),
@@ -105,6 +116,51 @@ def update_output_violin(selected_option, dimension):
     temp = df[df["UNIDADE"] == selected_option]
     fig = px.violin(temp, y=dimension)
     return fig
+
+@app.callback(
+    Output("grouped-boxplot", "figure"),
+    Input("unity", "value")
+)
+
+def update_output_boxplot(unity):
+    filtered_df = df[df['UNIDADE'].isin(unity)]
+    
+    data = [
+        go.Box(
+            y=filtered_df['Ensino'],
+            x=filtered_df['UNIDADE'],
+            name='Ensino',
+            marker_color='#F79646'
+        ),
+        go.Box(
+            y=filtered_df['Pesquisa'],
+            x=filtered_df['UNIDADE'],
+            name='Pesquisa',
+            marker_color='#92D050'
+        ),
+        go.Box(
+            y=filtered_df['Extensão'],
+            x=filtered_df['UNIDADE'],
+            name='Extensão',
+            marker_color='#4BACC6'
+        ),
+        go.Box(
+            y=filtered_df['Gestão'],
+            x=filtered_df['UNIDADE'],
+            name='Gestão',
+            marker_color='#B65708'
+        )
+    ]
+    
+    layout = go.Layout(
+        title='RAD 2023 - Notas por unidade',
+        xaxis=dict(title='Unidade'),
+        yaxis=dict(title='Nota'),
+        boxmode='group'
+    )
+    
+    figure = go.Figure(data=data, layout=layout)
+    return figure
 
 if __name__ == '__main__':
     app.run(debug=True)
