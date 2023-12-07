@@ -8,6 +8,8 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 df = pd.read_csv('df_sem_pendentes_number.csv')
+df_avg_rad = pd.read_csv('average_RAD_per_unit.csv')
+
 
 averageGradePerUnit = df.groupby('UNIDADE')['Nota_RAD'].mean().reset_index()
 averageGradePerUnit.rename(columns={'Nota_RAD': 'Media'}, inplace=True)
@@ -27,11 +29,18 @@ def generate_table(dataframe, max_rows=10):
         ])
     ])
 
-
 app = Dash(__name__)
 server = app.server
 app._favicon = "favicon.ico"
 app.title = "RAD - Universidade de Pernambuco"
+
+fig = px.strip(df, x='UNIDADE', y='Nota_RAD', color='CARGO', orientation='v', 
+               stripmode='overlay', title='Gráfico Strip por unidade')
+
+fig.update_layout(
+    xaxis_title='Unidade',
+    yaxis_title='Nota RAD'
+)
 
 app.layout = html.Main([
     html.H1('Protótipo RAD', className="page-title"),
@@ -39,23 +48,52 @@ app.layout = html.Main([
     html.P('Box plot das quatro dimensões do Relatório de Atividades Docentes da Universidade de Pernambuco, agrupados por unidade de ensino.', className="page-paragraph"),
 
     dcc.Checklist(
-        id='unity',
+        id='only-one', 
+        options=[{
+                'label': 'Selecionar todos', 
+                'value': 'Option'
+                }],
+        value=['Option'],
+        inline=True,
+        className='page-checklist'
+    ),
+
+    dcc.Checklist(
+        id='unity-grouped',
         options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
-        value=[''],
+        value=[],
         inline=True,
         className="page-checklist"
     ),
 
     dcc.Graph(id='grouped-boxplot'),
+
+    dcc.Checklist(
+        id='unity-nongrouped',
+        options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
+        value=[],
+        inline=True,
+        className="page-checklist"
+    ),
+
+    dcc.Graph(id='boxplot-rad'),
+
+    html.Div([
+    dcc.Graph(
+        id='strip-chart',
+        figure=fig
+    )
+])
 ])
 
 @app.callback(
     Output("grouped-boxplot", "figure"),
-    Input("unity", "value")
+    Input("unity-grouped", "value")
 )
 
 def update_output_boxplot(unity):
     filtered_df = df[df['UNIDADE'].isin(unity)]
+
     
     data = [
         go.Box(
@@ -85,9 +123,64 @@ def update_output_boxplot(unity):
     ]
     
     layout = go.Layout(
-        title='RAD 2023 - Notas por unidade',
+        title='Relatório de Atividades Docentes 2023 - Notas por unidade (separadas por dimensão)',
         xaxis=dict(title='Unidade'),
         yaxis=dict(title='Nota'),
+        boxmode='group'
+    )
+    
+    figure = go.Figure(data=data, layout=layout)
+    return figure
+
+@app.callback(
+    [Output('unity-grouped', 'value'),
+     Output('unity-nongrouped', 'value')],
+    [Input('only-one', 'value')]
+)
+
+def update_checklists(value):
+    if value:
+        return ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns',
+                'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'], \
+               ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns',
+                'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada']
+    else:
+        return [], []
+
+@app.callback(
+    Output("boxplot-rad", "figure"),
+    Input("unity-nongrouped", "value")
+)
+
+def update_output_boxplot(unity):
+    filtered_df = df[df['UNIDADE'].isin(unity)]
+    filtered_df = filtered_df.sort_values(by='UNIDADE')
+    filtered_df_avg_rad = df_avg_rad[df_avg_rad['UNIDADE'].isin(unity)]
+    filtered_df_avg_rad = filtered_df_avg_rad.sort_values(by='UNIDADE')
+    
+    data = []
+    
+    data.append(go.Box(
+        y=filtered_df['Nota_RAD'],
+        x=filtered_df['UNIDADE'],
+        name='Nota RAD',
+        marker_color='#A63A50',
+        boxmean=True
+    )
+    )
+
+    data.append(go.Scatter(
+        x=filtered_df_avg_rad['UNIDADE'],
+        y=filtered_df_avg_rad['Media_Nota_RAD'],
+        mode='lines',
+        name='Nota RAD média',
+        line=dict(color='black')
+    ))
+    
+    layout = go.Layout(
+        title='Relatório de Atividades Docentes 2023 - Notas por unidade (geral)',
+        xaxis=dict(title='Unidade'),
+        yaxis=dict(title='Nota RAD Geral'),
         boxmode='group'
     )
     
