@@ -34,8 +34,15 @@ server = app.server
 app._favicon = "favicon.ico"
 app.title = "RAD - Universidade de Pernambuco"
 
-fig = px.strip(df, x='UNIDADE', y='Nota_RAD', color='CARGO', orientation='v', 
-               stripmode='overlay', title='Gráfico Strip por unidade')
+fig = px.strip(
+               df, 
+               x='UNIDADE', 
+               y='Nota_RAD', 
+               color='CARGO', 
+               orientation='v', 
+               stripmode='overlay', 
+               title='Gráfico beeswarm por unidade'
+            )
 
 fig.update_layout(
     xaxis_title='Unidade',
@@ -59,7 +66,7 @@ app.layout = html.Main([
     ),
 
     dcc.Checklist(
-        id='unity-grouped',
+        id='unity',
         options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
         value=[],
         inline=True,
@@ -68,32 +75,22 @@ app.layout = html.Main([
 
     dcc.Graph(id='grouped-boxplot'),
 
-    dcc.Checklist(
-        id='unity-nongrouped',
-        options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
-        value=[],
-        inline=True,
-        className="page-checklist"
-    ),
-
     dcc.Graph(id='boxplot-rad'),
 
-    html.Div([
     dcc.Graph(
         id='strip-chart',
         figure=fig
     )
 ])
-])
 
 @app.callback(
     Output("grouped-boxplot", "figure"),
-    Input("unity-grouped", "value")
+    Input("unity", "value")
 )
 
-def update_output_boxplot(unity):
+def update_output_grouped_boxplot(unity):
     filtered_df = df[df['UNIDADE'].isin(unity)]
-
+    filtered_df = filtered_df.sort_values(by='UNIDADE')
     
     data = [
         go.Box(
@@ -133,23 +130,20 @@ def update_output_boxplot(unity):
     return figure
 
 @app.callback(
-    [Output('unity-grouped', 'value'),
-     Output('unity-nongrouped', 'value')],
-    [Input('only-one', 'value')]
+    Output('unity', 'value'),
+    Input('only-one', 'value')
 )
 
 def update_checklists(value):
     if value:
         return ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns',
-                'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'], \
-               ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns',
                 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada']
     else:
-        return [], []
+        return []
 
 @app.callback(
     Output("boxplot-rad", "figure"),
-    Input("unity-nongrouped", "value")
+    Input("unity", "value")
 )
 
 def update_output_boxplot(unity):
