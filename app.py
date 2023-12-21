@@ -123,7 +123,8 @@ def update_output_grouped_boxplot(unity):
         title='Relatório de Atividades Docentes 2023 - Notas por unidade (separadas por dimensão)',
         xaxis=dict(title='Unidade'),
         yaxis=dict(title='Nota'),
-        boxmode='group'
+        boxmode='group',
+        plot_bgcolor='#FFFFFF'
     )
     
     figure = go.Figure(data=data, layout=layout)
@@ -175,11 +176,49 @@ def update_output_boxplot(unity):
         title='Relatório de Atividades Docentes 2023 - Notas por unidade (geral)',
         xaxis=dict(title='Unidade'),
         yaxis=dict(title='Nota RAD Geral'),
-        boxmode='group'
+        boxmode='group',
+        plot_bgcolor='#FFFFFF',
     )
     
     figure = go.Figure(data=data, layout=layout)
     return figure
 
+@app.callback(
+    Output("strip-chart", "figure"),
+    Input("unity", "value")
+)
+
+def update_output_strip(unity):
+    filtered_df = df[df['UNIDADE'].isin(unity)]
+    filtered_df = filtered_df.sort_values(by='UNIDADE')
+
+    color_map = {
+            'Professor Adjunto': 'rgba(253, 174, 97, 0.7)',
+            'Professor Assistente': 'rgba(171, 217, 233, 0.7)',
+            'Professor Associado': 'rgba(233, 25, 28, 0.7)',
+            'Professor Auxiliar': 'rgba(44, 123, 182, 0.7)',
+            'Professor Titular': 'rgba(0, 0, 0, 0.7)',
+        }
+
+    figure = px.strip(
+               filtered_df, 
+               x='UNIDADE', 
+               y='Nota_RAD',
+               color='CARGO',
+               color_discrete_map=color_map,
+               orientation='v', 
+               stripmode='overlay', 
+               title='Gráfico beeswarm por unidade',
+            )
+
+    figure.update_layout(
+        xaxis_title='Unidade',
+        yaxis_title='Nota RAD',
+        plot_bgcolor='#FFFFFF',
+    )
+
+    return figure
+
 if __name__ == '__main__':
     app.run(debug=True)
+    
