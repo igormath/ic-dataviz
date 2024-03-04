@@ -19,7 +19,7 @@ main{
     padding: 0 5vw;
 }
 
-.page-checklist{
+.page-checklist, .page_radio, #unity_timeseries, #year_timeseries, #unity_timeseries_boxplot{
     font-size: 1rem;
     margin: 5vh 0 0 5vw;
 }
