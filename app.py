@@ -8,26 +8,13 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 df = pd.read_csv('df_sem_pendentes_number.csv')
-df_avg_rad = pd.read_csv('average_RAD_per_unit.csv')
-
+time_series = pd.read_csv('serie_nota_RAD_row_2017-2022.csv')
 
 averageGradePerUnit = df.groupby('UNIDADE')['Nota_RAD'].mean().reset_index()
 averageGradePerUnit.rename(columns={'Nota_RAD': 'Media'}, inplace=True)
 
 fig_cumulative = px.bar(df, x="UNIDADE", y="Nota_RAD", title="Notas por Unidade cumulativo")
 fig_average = px.bar(averageGradePerUnit, x="UNIDADE", y="Media", title="Notas por unidade média")
-
-def generate_table(dataframe, max_rows=10):
-    return html.Table([
-        html.Thead(
-            html.Tr([html.Th(col) for col in dataframe.columns])
-        ),
-       html.Tbody([
-            html.Tr([
-                html.Td(dataframe.iloc[i][col]) for col in dataframe.columns
-            ]) for i in range(min(len(dataframe), max_rows))
-        ])
-    ])
 
 app = Dash(__name__)
 server = app.server
@@ -47,6 +34,21 @@ fig = px.strip(
 fig.update_layout(
     xaxis_title='Unidade',
     yaxis_title='Nota RAD'
+)
+
+average_rad_general = time_series.groupby('Ano')['Nota_RAD'].mean().reset_index()
+
+figTimeSeries = go.Figure()
+figTimeSeries.add_trace(go.Scatter(x=['2017', '2018', '2019', '2020', '2021', '2022'],
+                        y=average_rad_general['Nota_RAD'],
+                        mode='lines+markers',
+                        name='Média de Nota',
+                        ))
+
+figTimeSeries.update_layout(
+    title='Nota RAD média por ano - Universidade de Pernambuco',
+    xaxis_title='Ano',
+    yaxis_title='Nota RAD',
 )
 
 app.layout = html.Main([
@@ -75,12 +77,44 @@ app.layout = html.Main([
 
     dcc.Graph(id='grouped-boxplot'),
 
-    dcc.Graph(id='boxplot-rad'),
+    dcc.Graph(
+        id='time-series-chart',
+        figure=figTimeSeries
+    ),
+
+    dcc.RadioItems(
+        options=sorted(time_series['Unidade'].unique()),
+        value='', 
+        inline=True,
+        id='unity_timeseries',
+    ),
 
     dcc.Graph(
-        id='strip-chart',
+        id='unit-rad-timeseries',
+    ),
+
+    dcc.RadioItems(
+        options=sorted(time_series['Ano'].unique()),
+        value='', 
+        inline=True,
+        id='year_timeseries',
+    ),
+
+    dcc.Graph(id='boxplot_rad_timeseries'),
+
+    dcc.Graph(
+        id='strip_chart_timeseries',
         figure=fig
-    )
+    ),
+
+    dcc.RadioItems(
+        options=sorted(time_series['Unidade'].unique()),
+        value='', 
+        inline=True,
+        id='unity_timeseries_boxplot',
+    ),
+
+    dcc.Graph(id='boxplot_rad_timeseries_unity'),
 ])
 
 @app.callback(
@@ -143,21 +177,53 @@ def update_checklists(value):
         return []
 
 @app.callback(
-    Output("boxplot-rad", "figure"),
-    Input("unity", "value")
+    Output("unit-rad-timeseries", "figure"),
+    Input("unity_timeseries", "value")
 )
 
-def update_output_boxplot(unity):
-    filtered_df = df[df['UNIDADE'].isin(unity)]
-    filtered_df = filtered_df.sort_values(by='UNIDADE')
-    filtered_df_avg_rad = df_avg_rad[df_avg_rad['UNIDADE'].isin(unity)]
-    filtered_df_avg_rad = filtered_df_avg_rad.sort_values(by='UNIDADE')
+def update_output_strip(unity_timeseries):
+    filtered_timeseries = time_series.loc[time_series['Unidade'] == unity_timeseries]
+    average_rad_unity = filtered_timeseries.groupby('Ano')['Nota_RAD'].mean().reset_index()
+
+    fig_unity_timeseries = go.Figure()
     
+    fig_unity_timeseries.add_trace(go.Scatter(x=filtered_timeseries['Ano'].unique(),
+                        y=average_rad_unity['Nota_RAD'],
+                        mode='lines+markers',
+                        name='Média de Nota',
+                        ))
+
+    fig_unity_timeseries.update_layout(
+        title='Nota RAD média por ano - Unidade %s' % (unity_timeseries),
+        xaxis_title='Ano',
+        yaxis_title='Nota RAD',
+        xaxis_tickformat=',d',
+        xaxis=dict(
+            tickmode='array',
+            tickvals=average_rad_unity['Ano'].unique(),  # Define os valores dos ticks do eixo X
+            ticktext=[str(int(ano)) for ano in average_rad_unity['Ano'].unique()]  # Converte os valores dos ticks para string
+
+        )
+    )
+    return fig_unity_timeseries
+
+@app.callback(
+    Output("boxplot_rad_timeseries", "figure"),
+    Input("year_timeseries", "value")
+)
+
+def update_output_boxplot(year_timeseries):
+
+    filtered_timeseries = time_series.loc[time_series['Ano'] == year_timeseries]
+    df_average = filtered_timeseries.groupby('Unidade')['Nota_RAD'].mean().reset_index()
+    df_average['Nota_RAD'] = filtered_timeseries['Nota_RAD'].mean()
+
+
     data = []
     
     data.append(go.Box(
-        y=filtered_df['Nota_RAD'],
-        x=filtered_df['UNIDADE'],
+        x=filtered_timeseries['Unidade'],
+        y=filtered_timeseries['Nota_RAD'],
         name='Nota RAD',
         marker_color='#A63A50',
         boxmean=True
@@ -165,15 +231,15 @@ def update_output_boxplot(unity):
     )
 
     data.append(go.Scatter(
-        x=filtered_df_avg_rad['UNIDADE'],
-        y=filtered_df_avg_rad['Media_Nota_RAD'],
+        x=df_average['Unidade'],
+        y=df_average['Nota_RAD'],
         mode='lines',
         name='Nota RAD média',
         line=dict(color='black')
     ))
     
     layout = go.Layout(
-        title='Relatório de Atividades Docentes 2023 - Notas por unidade (geral)',
+        title='Relatório de Atividades Docentes 2023 - Notas por unidade (Nota geral)',
         xaxis=dict(title='Unidade'),
         yaxis=dict(title='Nota RAD Geral'),
         boxmode='group',
@@ -184,13 +250,16 @@ def update_output_boxplot(unity):
     return figure
 
 @app.callback(
-    Output("strip-chart", "figure"),
-    Input("unity", "value")
+    Output("strip_chart_timeseries", "figure"),
+    Input("year_timeseries", "value")
 )
 
-def update_output_strip(unity):
-    filtered_df = df[df['UNIDADE'].isin(unity)]
-    filtered_df = filtered_df.sort_values(by='UNIDADE')
+def update_output_strip(year_timeseries):
+
+    filtered_timeseries = time_series.loc[time_series['Ano'] == year_timeseries]
+    filtered_df = filtered_timeseries.sort_values(by='Unidade')
+
+
 
     color_map = {
             'Professor Adjunto': 'rgba(253, 174, 97, 0.7)',
@@ -202,9 +271,9 @@ def update_output_strip(unity):
 
     figure = px.strip(
                filtered_df, 
-               x='UNIDADE', 
+               x='Unidade', 
                y='Nota_RAD',
-               color='CARGO',
+               color='Cargo',
                color_discrete_map=color_map,
                orientation='v', 
                stripmode='overlay', 
@@ -214,9 +283,51 @@ def update_output_strip(unity):
     figure.update_layout(
         xaxis_title='Unidade',
         yaxis_title='Nota RAD',
-        plot_bgcolor='#FFFFFF',
+        plot_bgcolor='#fff',
     )
 
+    return figure
+
+@app.callback(
+    Output("boxplot_rad_timeseries_unity", "figure"),
+    Input("unity_timeseries_boxplot", "value")
+)
+
+def update_output_boxplot(unity_timeseries_boxplot):
+
+    filtered_timeseries = time_series.loc[time_series['Unidade'] == unity_timeseries_boxplot]
+    df_average = filtered_timeseries.groupby('Ano')['Nota_RAD'].mean().reset_index()
+    df_average['Nota_RAD'] = filtered_timeseries['Nota_RAD'].mean()
+
+
+    data = []
+    
+    data.append(go.Box(
+        x=filtered_timeseries['Ano'],
+        y=filtered_timeseries['Nota_RAD'],
+        name='Nota RAD',
+        marker_color='#A63A50',
+        boxmean=True
+    )
+    )
+
+    data.append(go.Scatter(
+        x=df_average['Ano'],
+        y=df_average['Nota_RAD'],
+        mode='lines',
+        name='Nota RAD média',
+        line=dict(color='black')
+    ))
+    
+    layout = go.Layout(
+        title='Relatório de Atividades Docentes 2023 - Série por unidade (Nota geral)',
+        xaxis=dict(title='Unidade'),
+        yaxis=dict(title='Nota RAD Geral'),
+        boxmode='group',
+        plot_bgcolor='#FFFFFF',
+    )
+    
+    figure = go.Figure(data=data, layout=layout)
     return figure
 
 if __name__ == '__main__':
