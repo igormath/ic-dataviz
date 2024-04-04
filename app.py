@@ -53,7 +53,7 @@ dash.register_page(
 
             dcc.Checklist(
                 options=[{'label': 'Selecionar Todos', 'value': 'Select All'}],
-                value=[], 
+                value=['Select All'], 
                 inline=True,
                 id='select_all',
             ),
@@ -89,50 +89,55 @@ dash.register_page(
         path='/visao-ano', 
         layout=html.Main([
             html.H2('Visão por Ano', className="page-title"),
-            html.P('Box plot das quatro dimensões do Relatório de Atividades Docentes da Universidade de Pernambuco, agrupados por unidade de ensino.', className="page-paragraph"),
-
+           
             dcc.RadioItems(
                 options=sorted(time_series['Ano'].unique()),
                 value='', 
                 inline=True,
                 id='year_timeseries',
             ),
-
-            dcc.Graph(
-                id='strip_chart_timeseries',
-                figure=fig
+            
+            html.Div(
+                dcc.Graph(id='number_of_teachers_bars'), 
+                className="fixed-div"
             ),
+                
+            html.Div([
+                    dcc.Graph(
+                        id='strip_chart_timeseries',
+                        figure=fig
+                    ),
 
-            html.P(
-                id='number_of_teachers',
-                className="page-paragraph",
+                    dcc.Graph(id='violin_unity'),
+
+                    dcc.Graph(id='boxplot_rad_timeseries'),
+
+                    dcc.Checklist(
+                        id='only-one', 
+                        options=[{
+                                'label': 'Selecionar todos', 
+                                'value': 'Option'
+                                }],
+                        value=['Option'],
+                        inline=True,
+                        className='page-checklist'
+                    ),
+
+                    dcc.Checklist(
+                        id='unity',
+                        options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
+                        value=[],
+                        inline=True,
+                        className="page-checklist"
+                    ),
+
+                    dcc.Graph(id='grouped-boxplot'),
+                ],
+                className = 'row'
+            )
+            ],
             ),
-
-            dcc.Graph(id='violin_unity'),
-
-            dcc.Graph(id='boxplot_rad_timeseries'),
-
-            dcc.Checklist(
-                id='only-one', 
-                options=[{
-                        'label': 'Selecionar todos', 
-                        'value': 'Option'
-                        }],
-                value=['Option'],
-                inline=True,
-                className='page-checklist'
-            ),
-
-            dcc.Checklist(
-                id='unity',
-                options= ['Arcoverde', 'Caruaru', 'ESEF', 'FCAP', 'FCM', 'FENSG', 'FOP', 'Garanhuns', 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada'],
-                value=[],
-                inline=True,
-                className="page-checklist"
-            ),
-
-            dcc.Graph(id='grouped-boxplot'),
-]))
+)
 
 # Layout da página principal
 
@@ -199,7 +204,14 @@ def update_output_grouped_boxplot(unity):
         xaxis=dict(title='Unidade'),
         yaxis=dict(title='Nota'),
         boxmode='group',
-        plot_bgcolor='#FFFFFF'
+        plot_bgcolor='#FFFFFF',
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1
+        ),
     )
     
     figure = go.Figure(data=data, layout=layout)
@@ -307,7 +319,7 @@ def update_output_boxplot(year_timeseries):
     data = []
     
     data.append(go.Box(
-        x=filtered_timeseries['Unidade'],
+        x=sorted(filtered_timeseries['Unidade']),
         y=filtered_timeseries['Nota_RAD'],
         name='Nota RAD',
         marker_color='#A63A50',
@@ -320,15 +332,25 @@ def update_output_boxplot(year_timeseries):
         y=df_average['Nota_RAD'],
         mode='lines',
         name='Nota RAD média',
-        line=dict(color='black')
+        line=dict(
+            color='black',
+            dash='dash',
+        )
     ))
     
     layout = go.Layout(
-        title='Relatório de Atividades Docentes 2023 - Notas por unidade (Nota geral)',
+        title=f'Relatório de Atividades Docentes {year_timeseries} - Notas por unidade (Nota geral)',
         xaxis=dict(title='Unidade'),
         yaxis=dict(title='Nota RAD Geral'),
         boxmode='group',
         plot_bgcolor='#FFFFFF',
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1,
+        ),
     )
     
     figure = go.Figure(data=data, layout=layout)
@@ -367,27 +389,38 @@ def update_output_strip(year_timeseries):
         xaxis_title='Unidade',
         yaxis_title='Nota RAD',
         plot_bgcolor='#fff',
-    )
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="right",
+            x=1,
+        ),  
+)
 
     return figure
 
 @app.callback(
-    Output("number_of_teachers", "children"),
+    Output("number_of_teachers_bars", "figure"),
     Input("year_timeseries", "value")
 )
 
-def calcular_numero(year_timeseries):
+def horizontal_bar_chart(year_timeseries):
     filtered_timeseries = time_series.loc[time_series['Ano'] == year_timeseries]
     n_teachers = filtered_timeseries['Unidade'].value_counts().reset_index()
     n_teachers.columns = ['Unidade', 'N_Professores']
-    result_string = 'Quantidade de docentes por unidade:\n'
-    for index, row in n_teachers.iterrows():
-        result_string += '{}: {}, '.format(row['Unidade'], row['N_Professores'])
+    
+    figure = go.Figure(go.Bar(
+        x = n_teachers['N_Professores'],
+        y = n_teachers['Unidade'],
+        orientation = 'h',
+    ))
 
-    # Removendo a última vírgula e adicionando quebra de linha no final
-    result_string = result_string[:-2] + '\n'
-    # Supondo que o cálculo do número seja simplesmente o número de cliques no botão
-    return result_string
+    figure.update_layout(
+        title = f'Número de professores por Unidade, Ano {year_timeseries}'
+    )
+
+    return figure
 
 @app.callback(
     Output("boxplot_rad_timeseries_unity", "figure"),
@@ -484,6 +517,11 @@ def update_output_errorbands(unity_timeseries_boxplot):
             showlegend=False
         )
     ])
+
+    figure.update_layout( xaxis={
+        'range': [filtered_quartiles_dataframe['Ano'].min(), filtered_quartiles_dataframe['Ano'].max()], 
+        'tickvals': [*range(int(filtered_quartiles_dataframe['Ano'].min()), int(filtered_quartiles_dataframe['Ano'].max()))]
+    })
     
     return figure
 
