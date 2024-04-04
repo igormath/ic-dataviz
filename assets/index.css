@@ -39,3 +39,31 @@ main{
     font-size: 1.2rem;
     padding: 0 5vw;
 }
+
+.year-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.yearcharts-container{
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    width: 70%; 
+    float: left;
+}
+
+.fixed-div {
+    margin-top: 30vh;
+    width: 30%;
+    float: right; 
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 20px;
+}
