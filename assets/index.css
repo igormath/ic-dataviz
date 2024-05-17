@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-main{
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-size: 62.5%;
     font-weight: 400;
@@ -10,8 +13,21 @@ main{
     color: #000;
     font-size: 3rem;
     font-weight: 700;
-    padding: 0 5vw;
     text-align: center;
+    background-color: #223073;
+    color: #f9f9f9;
+    margin: 0 44% 0 0;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    /* width: 55%; */
+    text-align: center;
+}
+
+.page-subtitle{
+    font-size: 2.3rem;
+    background-color: #fff;
+    color: #223073;
 }
 
 .page-paragraph{
@@ -21,18 +37,42 @@ main{
 
 .page-checklist, .page_radio, #unity_timeseries, #year_timeseries, #unity_timeseries_boxplot, #select_all{
     font-size: 1rem;
-    margin: 5vh 0 0 5vw;
+    margin: 4vh 0 0 5vw;
 }
 
 .main-links-list{
     font-size: 1.5rem;
     display: flex;
     justify-content: flex-start;
+    background-color: #e60000;
+    margin: 0;
+    padding: 0;
 }
 
-.main-links-list>li{
-    margin: 0 1.5vw 0 0;
+.nav-link{
+    width: 10vw; /* Para adicionar responsividade em monitores 1024x768, o valor deve ser de, no mínimo, 16vw */
+    height: 5vh;
+    text-align: center;
     list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-link:hover{
+    opacity: 0.8;
+}
+
+.nav-link>a{
+    text-decoration: none;
+    color: #f9f9f9;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-page-container>p{
@@ -57,13 +97,64 @@ main{
 }
 
 .fixed-div {
-    margin-top: 30vh;
+    margin-top: 60vh; /* alterar valores para subir e descer o gráfico do número de professores. 55vh padrao*/
+    /* margin-bottom: min(10vh, 5%); */
     width: 30%;
     float: right; 
     position: fixed;
     right: 0;
     top: 0;
-    height: 100vh;
+    /* height: 100vh; */
     overflow-y: auto;
     padding-top: 20px;
+    background-color: #e5ebf7;
+    border-radius: 10px;
+}
+
+
+#grouped-boxplot-container{
+    width: 100%;
+}
+
+.header-container{
+    background-color: #223073;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-header{
+    display: inline-block;
+    height: 5.7vh;
+    margin-left: 2vw;
+}
+
+.upe-logo{
+    margin-left: 1vw;
+}
+
+.icons-container{
+    display: inline-block;
+    width: 20%;
+    margin: 0;
+}
+
+.active{
+    background-color: #f27f7f;
+}
+
+#year_timeseries{ /* medidas do dropdown de anos */
+    width: 5%;
+    margin: 4vh 0 0 5vw;
+    display: block;
+}
+
+.dropdown__checklist__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 4vh;
+    margin-bottom: -3vh;
+    z-index: 999;
 }
