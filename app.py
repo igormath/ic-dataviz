@@ -1,15 +1,18 @@
 # Run this app with `python app.py` and
 # visit http://127.0.0.1:8050/ in your web browser.
 
-from dash import Dash, html, dcc, State
-from dash.dependencies import Input, Output, State, ALL
+from dash import html, dcc
+from dash.dependencies import Input, Output
 import dash
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+import flask
+
+server = flask.Flask(__name__)
+app = dash.Dash(server=server, name="Dashboard", url_base_pathname="/rad/", use_pages=True, pages_folder="")
 
 df = pd.read_csv('df_sem_pendentes_number.csv')
-# time_series = pd.read_csv('serie_nota_RAD_row_2017-2022.csv')
 time_series = pd.read_csv('serie_nota_RAD_row_(2017-2022)-sem-NaN.csv')
 
 averageGradePerUnit = df.groupby('UNIDADE')['Nota_RAD'].mean().reset_index()
@@ -18,11 +21,8 @@ averageGradePerUnit.rename(columns={'Nota_RAD': 'Media'}, inplace=True)
 fig_cumulative = px.bar(df, x="UNIDADE", y="Nota_RAD", title="Notas por Unidade cumulativo")
 fig_average = px.bar(averageGradePerUnit, x="UNIDADE", y="Media", title="Notas por unidade média")
 
-app = Dash(__name__, use_pages=True, pages_folder="")
-server = app.server
 app._favicon = "favicon.ico"
 app.title = "RAD - Universidade de Pernambuco"
-
 
 fig = px.strip(
                df, 
@@ -388,12 +388,14 @@ def update_output_strip(unity_timeseries):
 
 @app.callback(
     Output("violin_unity", "figure"),
-    Input("year_timeseries", "value")
+    Input("year_timeseries", "value"),
+    Input("unity", "value")
 )
 
-def update_output_boxplot(year_timeseries):
+def update_output_boxplot(year_timeseries, unity):
 
-    filtered_timeseries = time_series.loc[time_series['Ano'] == year_timeseries]
+    filtered_df = time_series[time_series['Unidade'].isin(unity)]
+    filtered_timeseries = filtered_df.loc[filtered_df['Ano'] == year_timeseries]
     df_average = filtered_timeseries.groupby('Unidade')['Nota_RAD'].mean().reset_index()
     df_average['Nota_RAD'] = filtered_timeseries['Nota_RAD'].mean()
 
@@ -401,10 +403,10 @@ def update_output_boxplot(year_timeseries):
 
     fig = go.Figure()
 
-    for unity in units:
-        fig.add_trace(go.Violin(x=filtered_timeseries['Unidade'][filtered_timeseries['Unidade'] == unity],
-                                y=filtered_timeseries['Nota_RAD'][filtered_timeseries['Unidade'] == unity],
-                                name=unity,
+    for unity_name in units:
+        fig.add_trace(go.Violin(x=filtered_timeseries['Unidade'][filtered_timeseries['Unidade'] == unity_name],
+                                y=filtered_timeseries['Nota_RAD'][filtered_timeseries['Unidade'] == unity_name],
+                                name=unity_name,
                                 meanline_visible=True,
                                 fillcolor='rgba(166, 58, 80, 0.7)',
                                 line_color='rgba(166, 58, 80, 1)',
@@ -495,13 +497,14 @@ def update_output_boxplot(year_timeseries):
 
 @app.callback(
     Output("strip_chart_timeseries", "figure"),
-    Input("year_timeseries", "value")
+    Input("year_timeseries", "value"),
+    Input("unity", "value")
 )
 
-def update_output_strip(year_timeseries):
-
-    filtered_timeseries = time_series.loc[time_series['Ano'] == year_timeseries]
-    filtered_df = filtered_timeseries.sort_values(by='Unidade')
+def update_output_strip(year_timeseries, unity):
+    filtered_df_unity = time_series[time_series['Unidade'].isin(unity)]
+    filtered_timeseries = filtered_df_unity.loc[filtered_df_unity['Ano'] == year_timeseries]
+    filtered_df_result = filtered_timeseries.sort_values(by='Unidade')
 
     color_map = {
             'Professor Adjunto': 'rgba(253, 174, 97, 0.7)',
@@ -512,7 +515,7 @@ def update_output_strip(year_timeseries):
         }
 
     figure = px.strip(
-               filtered_df, 
+               filtered_df_result, 
                x='Unidade', 
                y='Nota_RAD',
                color='Cargo',
