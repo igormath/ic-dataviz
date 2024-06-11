@@ -50,8 +50,9 @@ body{
 }
 
 .nav-link{
-    width: 10vw; /* Para adicionar responsividade em monitores 1024x768, o valor deve ser de, no mínimo, 16vw */
+    min-width: 10vw;
     height: 5vh;
+    padding: 0 1vw;
     text-align: center;
     list-style: none;
     cursor: pointer;
