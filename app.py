@@ -1,8 +1,8 @@
 # Run this app with `python app.py` and
 # visit http://127.0.0.1:8050/ in your web browser.
 
-from dash import html, dcc
-from dash.dependencies import Input, Output
+from dash import html, dcc, callback_context
+from dash.dependencies import Input, Output, State
 import dash
 import pandas as pd
 import plotly.express as px
@@ -75,6 +75,7 @@ dash.register_page(
             value='Média Geral', 
             inline=True,
             id='unity_timeseries_boxplot',
+            className='visao__radio__checklist'
             ),
 
             # dcc.Graph(id='boxplot_rad_timeseries_unity'),
@@ -139,12 +140,21 @@ dash.register_page(
             className='row',
             id='grouped-boxplot-container',
             ),
-            
-            html.Div(
-                dcc.Graph(id='number_of_teachers_bars'), 
-                className="fixed-div"
+
+            html.Div([
+                html.Div(className='btn__div', children=[
+                    html.P('Número de professores por Unidade', className='numberofteachers__p'),
+                    html.Button(id='show-graph-button', className='show__graph__btn', children=[html.Img(className='btn__icon',
+                        src=r'assets/up.svg', alt='Mostrar Gráfico')]),
+                    html.Button(id='hide-graph-button', className='show__graph__btn', children=[html.Img(className='btn__icon',
+                        src=r'assets/down.svg', alt='Esconder Gráfico')]),
+                ]),
+                dcc.Graph(id='number_of_teachers_bars'),
+                ], 
+                id='graph-container', 
+                className="fixed-div",
             ),
-                
+
             html.Div([
                     dcc.Graph(
                         id='strip_chart_timeseries',
@@ -269,17 +279,25 @@ def update_output_grouped_boxplot(unity):
     ]
     
     layout = go.Layout(
-        title='Notas por unidade (separadas por dimensão) - 2022',
+        title=dict(
+            text='Notas por unidade e dimensão (disponível apenas para o ano 2022)',
+            y=0.85,
+            xanchor='left',
+            font=dict(
+                size=20,
+                color='black',
+                weight='bold'
+            ),
+        ),
         xaxis=dict(title='Unidade'),
         yaxis=dict(title='Nota'),
         boxmode='group',
         plot_bgcolor='#FFFFFF',
-        title_y = 0.8,
         legend=dict(
             orientation="h",
             yanchor="top",
             xanchor="right",
-            y=-0.05,
+            y=-0.2,
             x=0.22
         ),
     )
@@ -348,7 +366,14 @@ def update_output_strip(unity_timeseries):
     fig = px.line(media_unidade_ano, x = 'Ano', y = 'Nota_Media', color='Unidade')
     
     fig.update_layout(
-        title='Evolução da nota média por unidade',
+        title=dict(
+            text='Evolução da nota média por unidade',
+            font=dict(
+                size=20,
+                color='black',
+                weight='bold'
+            )
+        ),
         xaxis_title='Ano',
         yaxis_title='Nota RAD Média',
         xaxis_tickformat=',d',
@@ -427,7 +452,14 @@ def update_output_boxplot(year_timeseries, unity):
         
     fig.update_layout(
         plot_bgcolor='#FFFFFF',
-        title_text=f'Distribuição das notas por unidade - {year_timeseries}',
+        title=dict(
+            text=f'Distribuição das notas por unidade - {year_timeseries}',
+            font=dict(
+                size=20,
+                color='black',
+                weight='bold'
+            )
+        ),
     )
 
     fig.update_yaxes(
@@ -522,7 +554,6 @@ def update_output_strip(year_timeseries, unity):
                color_discrete_map=color_map,
                orientation='v', 
                stripmode='overlay', 
-               title='Notas por cargo',
             )
 
     figure.update_layout(
@@ -535,7 +566,15 @@ def update_output_strip(year_timeseries, unity):
             y=1.02,
             xanchor="right",
             x=1,
-        ),  
+        ),
+        title=dict(
+            text=f'Notas por cargo - {year_timeseries}',
+            font=dict(
+                size=20,
+                color='black',
+                weight='bold'
+            )
+        ),
     )
 
     # Adiciona as linhas das grades
@@ -570,7 +609,7 @@ def horizontal_bar_chart(year_timeseries):
     ))
 
     figure.update_layout(
-        title = f'Número de professores por Unidade, Ano {year_timeseries}',
+        title=f'Ano {year_timeseries}',
         paper_bgcolor = '#e5ebf7',
         height = 420,  # Defina a altura desejada em pixels
         margin=dict(
@@ -588,6 +627,27 @@ def horizontal_bar_chart(year_timeseries):
     )
 
     return figure
+
+@app.callback(
+    Output('graph-container', 'className'),
+    [Input('show-graph-button', 'n_clicks'),
+     Input('hide-graph-button', 'n_clicks')],
+    prevent_initial_call=True
+)
+def toggle_graph(show_clicks, hide_clicks):
+    ctx = callback_context
+
+    if not ctx.triggered:
+        return "fixed-div hidden"
+
+    triggered_id = ctx.triggered[0]['prop_id'].split('.')[0]
+
+    if triggered_id == 'show-graph-button':
+        return "fixed-div visible"
+    elif triggered_id == 'hide-graph-button':
+        return "fixed-div hidden"
+
+    return "fixed-div hidden"
 
 # @app.callback(
 #     Output("boxplot_rad_timeseries_unity", "figure"),
@@ -700,7 +760,14 @@ def update_output_boxplot(unity_timeseries_boxplot):
         ))
     
     fig.update_layout(
-        title='Distribuição da nota média por ano',
+        title=dict(
+            text='Distribuição da nota média por ano',
+            font=dict(
+                size=20,
+                color='black',
+                weight='bold'
+            )
+        ),
         xaxis=dict(title='Ano'),
         yaxis=dict(title='Nota RAD'),
         boxmode='group',
@@ -773,5 +840,5 @@ def update_output_boxplot(unity_timeseries_boxplot):
 #     return figure
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=80)
+    app.run(debug=False, host='0.0.0.0', port=80)
     
