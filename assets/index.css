@@ -5,29 +5,21 @@ body{
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-size: 62.5%;
+    /* font-size: 62.5%; APAGAR DEPOIS */
     font-weight: 400;
 }
 
 .page-title{
-    color: #000;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     background-color: #223073;
     color: #f9f9f9;
     margin: 0 44% 0 0;
-    height: 10vh;
     display: flex;
     align-items: center;
     /* width: 55%; */
     text-align: center;
-}
-
-.page-subtitle{
-    font-size: 2.3rem;
-    background-color: #fff;
-    color: #223073;
 }
 
 .page-paragraph{
@@ -36,12 +28,13 @@ body{
 }
 
 .page-checklist, .page_radio, #unity_timeseries, #year_timeseries, #unity_timeseries_boxplot, #select_all{
-    font-size: 1rem;
+    font-size: 16px;
     margin: 4vh 0 0 5vw;
 }
 
 .main-links-list{
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    font-size: 24px;
     display: flex;
     justify-content: flex-start;
     background-color: #e60000;
@@ -98,7 +91,8 @@ body{
 }
 
 .fixed-div {
-    margin-top: 60vh; /* alterar valores para subir e descer o gráfico do número de professores. 55vh padrao*/
+    /* margin-top: 90vh;  */
+    margin-top: 80vh; /* alterar valores para subir e descer o gráfico do número de professores. 55vh padrao*/
     /* margin-bottom: min(10vh, 5%); */
     width: 30%;
     float: right; 
@@ -110,6 +104,44 @@ body{
     padding-top: 20px;
     background-color: #e5ebf7;
     border-radius: 10px;
+    transition: margin-top 0.5s ease-in-out;  /* Adiciona transição suave */
+    height: 100%;
+}
+
+.visible {
+    margin-top: 55vh;
+}
+
+.hidden {
+    margin-top: 80vh;
+}
+
+.btn__div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show__graph__btn{
+    max-width: 2vw;
+    margin-right: 0.5vw;
+    border: 1px solid #4e4d4d;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in;
+}
+
+.show__graph__btn:hover{
+    opacity: 0.7;
+    border-color:#223073;
+}
+
+.btn__icon{
+    width: 100%;
+}
+
+.numberofteachers__p{
+    font-size: 1.2em;
+    margin: 0.5vh 1.5vw 0.5vh 0.5vw;
 }
 
 
@@ -122,6 +154,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 7vh;
 }
 
 .icon-header{
@@ -145,9 +178,10 @@ body{
 }
 
 #year_timeseries{ /* medidas do dropdown de anos */
-    width: 5%;
-    margin: 4vh 0 0 5vw;
+    min-width: 9%;
+    margin: 4vh 0 0 4vw;
     display: block;
+    text-align: center;
 }
 
 .dropdown__checklist__div {
@@ -156,6 +190,67 @@ body{
     justify-content: flex-start;
     align-items: center;
     height: 4vh;
-    margin-bottom: -3vh;
+    /* margin-bottom: -3vh; */
     z-index: 999;
+}
+
+#strip_chart_timeseries, #grouped-boxplot, #violin_unity{
+    margin-bottom: 5vh;
+}
+
+#unity_timeseries_boxplot{
+    margin: 10vh 5vh 0;
+}
+
+#boxplot_line, #unit-rad-timeseries{
+    margin: 1.5vh 0 5vh;
+}
+
+@media (max-width: 1024px) {
+    .fixed-div {
+        margin-top: 60vh; 
+    }
+
+    .visible{
+        margin-top: 20vh;
+    }
+
+    .hidden{
+        margin-top: 60vh;
+    }
+
+    #grouped-boxplot{
+        margin: 0;
+    }
+}
+
+@media (max-width: 1366px) {
+    .visible{
+        margin-top: 35vh;
+    }
+
+    .hidden{
+        margin-top: 80vh;
+    }
+
+    .show__graph__btn{
+        max-width: 2.5vw;
+    }
+
+    .numberofteachers__p{
+        font-size: 1.2em;
+        margin: 0.5vh 0.5vw;
+    }
+    
+    #grouped-boxplot{
+        margin: 0;
+    }
+
+    #year_timeseries{ 
+        min-width: 7%;
+    }
+
+    .dropdown__checklist__div {
+        margin-bottom: -4.5vh;
+    }
 }
