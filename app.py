@@ -141,16 +141,8 @@ dash.register_page(
             id='grouped-boxplot-container',
             ),
 
-            html.Div([
-                html.Div(className='btn__div', children=[
-                    html.P('Número de professores por Unidade', className='numberofteachers__p'),
-                    html.Button(id='show-graph-button', className='show__graph__btn', children=[html.Img(className='btn__icon',
-                        src=r'assets/up.svg', alt='Mostrar Gráfico')]),
-                    html.Button(id='hide-graph-button', className='show__graph__btn', children=[html.Img(className='btn__icon',
-                        src=r'assets/down.svg', alt='Esconder Gráfico')]),
-                ]),
+            html.Div(
                 dcc.Graph(id='number_of_teachers_bars'),
-                ], 
                 id='graph-container', 
                 className="fixed-div",
             ),
@@ -609,8 +601,9 @@ def horizontal_bar_chart(year_timeseries):
     ))
 
     figure.update_layout(
-        title=f'Ano {year_timeseries}',
-        paper_bgcolor = '#e5ebf7',
+        title=f'Número de professores por Unidade, Ano {year_timeseries}',
+        paper_bgcolor = '#fff',
+        plot_bgcolor='white',
         height = 420,  # Defina a altura desejada em pixels
         margin=dict(
             t=40,
@@ -620,6 +613,7 @@ def horizontal_bar_chart(year_timeseries):
 
     figure.update_xaxes(
         fixedrange=True,
+        gridcolor='lightgrey'
     )
 
     figure.update_yaxes(
@@ -840,5 +834,5 @@ def update_output_boxplot(unity_timeseries_boxplot):
 #     return figure
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=80)
+    app.run(debug=True, host='0.0.0.0', port=8888)
     
