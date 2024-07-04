@@ -601,7 +601,14 @@ def horizontal_bar_chart(year_timeseries):
     ))
 
     figure.update_layout(
-        title=f'Número de professores por Unidade, Ano {year_timeseries}',
+        title=dict(
+            text=f'Número de professores por Unidade - {year_timeseries}',
+            font=dict(
+                size=20,
+                color='black',
+                weight='bold'
+            )
+        ),
         paper_bgcolor = '#fff',
         plot_bgcolor='white',
         height = 420,  # Defina a altura desejada em pixels
