@@ -555,7 +555,7 @@ def update_output_strip(year_timeseries, unity):
         legend=dict(
             orientation="h",
             yanchor="bottom",
-            y=1.02,
+            y=0.98,
             xanchor="right",
             x=1,
         ),
@@ -565,7 +565,7 @@ def update_output_strip(year_timeseries, unity):
                 size=20,
                 color='black',
                 weight='bold'
-            )
+            ),
         ),
     )
 
@@ -602,7 +602,7 @@ def horizontal_bar_chart(year_timeseries):
 
     figure.update_layout(
         title=dict(
-            text=f'Número de professores por Unidade - {year_timeseries}',
+            text=f'Professores por Unidade - {year_timeseries}',
             font=dict(
                 size=20,
                 color='black',
@@ -628,27 +628,6 @@ def horizontal_bar_chart(year_timeseries):
     )
 
     return figure
-
-@app.callback(
-    Output('graph-container', 'className'),
-    [Input('show-graph-button', 'n_clicks'),
-     Input('hide-graph-button', 'n_clicks')],
-    prevent_initial_call=True
-)
-def toggle_graph(show_clicks, hide_clicks):
-    ctx = callback_context
-
-    if not ctx.triggered:
-        return "fixed-div hidden"
-
-    triggered_id = ctx.triggered[0]['prop_id'].split('.')[0]
-
-    if triggered_id == 'show-graph-button':
-        return "fixed-div visible"
-    elif triggered_id == 'hide-graph-button':
-        return "fixed-div hidden"
-
-    return "fixed-div hidden"
 
 # @app.callback(
 #     Output("boxplot_rad_timeseries_unity", "figure"),
@@ -841,5 +820,5 @@ def update_output_boxplot(unity_timeseries_boxplot):
 #     return figure
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8888)
+    app.run(debug=False, host='0.0.0.0', port=80)
     
