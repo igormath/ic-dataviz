@@ -91,9 +91,7 @@ body{
 }
 
 .fixed-div {
-    /* margin-top: 80vh; alterar valores para subir e descer o gráfico do número de professores. 55vh padrao */
-    /* margin-bottom: min(10vh, 5%); */
-    width: 30%;
+    width: 29%;
     float: right; 
     /* position: fixed; */
     right: 0;
@@ -101,10 +99,7 @@ body{
     /* height: 100vh; */
     overflow-y: auto;
     padding-top: 20px;
-    background-color: #fff;
     border-radius: 10px;
-    transition: margin-top 0.5s ease-in-out;  /* Adiciona transição suave */
-    height: 100%;
 }
 
 .visible {
