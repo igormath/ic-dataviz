@@ -24,21 +24,6 @@ fig_average = px.bar(averageGradePerUnit, x="UNIDADE", y="Media", title="Notas p
 app._favicon = "favicon.ico"
 app.title = "RAD - Universidade de Pernambuco"
 
-fig = px.strip(
-               df, 
-               x='UNIDADE', 
-               y='Nota_RAD', 
-               color='CARGO', 
-               orientation='v', 
-               stripmode='overlay', 
-               title='Gráfico beeswarm por unidade'
-            )
-
-fig.update_layout(
-    xaxis_title='Unidade',
-    yaxis_title='Nota RAD'
-)
-
 average_rad_general = time_series.groupby('Ano')['Nota_RAD'].mean().reset_index()
 
 # Visão histórica: gráficos que plotam todos os anos.
@@ -150,7 +135,6 @@ dash.register_page(
             html.Div([
                     dcc.Graph(
                         id='strip_chart_timeseries',
-                        figure=fig
                     ),
 
                     dcc.Graph(id='violin_unity'),
@@ -564,8 +548,9 @@ def update_output_strip(year_timeseries, unity):
             font=dict(
                 size=20,
                 color='black',
-                weight='bold'
+                weight='bold',
             ),
+            y=1,
         ),
     )
 
