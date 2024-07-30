@@ -69,9 +69,37 @@ body{
     justify-content: center;
 }
 
-.home-page-container>p{
+.home-page-container>p, .about__role-subtitle, .home-page-container>ul{
     font-size: 1.2rem;
     padding: 0 5vw;
+}
+
+.home-page-container>ul{
+    padding-left: 6vw;
+    margin: 0;
+}
+
+.home-page-container>ul>li{
+    margin: 1vh 0;
+}
+
+.about__role-subtitle{
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    margin: 1.5vh 0;
+}
+
+.about__role-subtitle:first-of-type{
+    margin-top: 3vh;
+}
+
+.about__role-description{
+    margin: 0;
+}
+
+.about__listitem{
+    display: flex;
+    flex-direction: row;
 }
 
 .year-container{

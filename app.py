@@ -155,9 +155,44 @@ dash.register_page(
         path='/sobre',
         order=2,
         layout=html.Div([
-            html.P("O Relatório de Atividades Docentes (RAD) resume as atividades desenvolvidas pelos docentes nas dimensões de ensino, pesquisa, extensão e gestão no período de avaliação, e as quantifica com base em indicadores mensuráveis. Estes dados são posteriormente validados pelas comissões locais de cada unidade de ensino seguindo as regras dispostas na resolução CONSUN 028/2018 (UPE, 2018)."),
-            html.P("Este processo avaliativo bem estruturado gera dados confiáveis do desempenho dos docentes e, se analisados de forma agregada, também de cada unidade de ensino que compõe a UPE. Esses dados podem revelar insights valiosos capazes de auxiliar no processo de tomada de decisões, contribuindo assim para alcançar um dos principais objetivos de um processo avaliativo em uma organização: o aprimoramento contínuo das atividades desenvolvidas."),
-            html.P("Desse modo, a construção deste dashboard para disponibilizar os dados do RAD aos gestores da UPE de forma simples e intuitiva pode levar à geração de inúmeros insights, como identificação da necessidade de programas de capacitação, incentivo a projetos de pesquisa/ensino/extensão em áreas/unidades específicas da instituição e, de forma geral, uma visão mais detalhada e granularizada das atividades realizadas na instituição."),
+            html.P("O Relatório de Atividades Docentes (RAD) resume as atividades desenvolvidas pelos docentes da UPE nas dimensões de ensino, pesquisa, extensão e gestão e as quantifica com base em indicadores mensuráveis. Os dados são posteriormente validados pelas comissões locais de cada unidade de ensino seguindo as regras dispostas na resolução CONSUN 028/2018."),
+            html.P("Este dashboard, resultado de um projeto de Iniciação Científica desenvolvido na UPE campus Caruaru, busca disponibilizar os dados do RAD de forma simples e interativa para apoiar gestores e professores na análise dos resultados."),
+            html.H3("Bolsista: ", className="about__role-subtitle"),
+            html.Ul(
+                html.Li(
+                    html.Div([
+                        html.A(
+                            html.P("Igor Matheus Pereira de Azevedo", className="about__role-description"),
+                            href='http://lattes.cnpq.br/2914598103948124',
+                            target="_blank",
+                            ),
+                        html.P(", bolsista PIBIC UPE/PFA, curso de Sistemas de Informação, UPE campus Caruaru.", className="about__role-description"),
+                    ], className="about__listitem"),
+                )
+            ),
+            html.H3("Orientadores: ", className="about__role-subtitle"),
+            html.Ul([
+                html.Li(
+                    html.Div([
+                        html.A(
+                            html.P("Prof. Raphael Augusto de Sousa Dourado", className="about__role-description"),
+                            href='http://lattes.cnpq.br/6919072366440708',
+                            target="_blank",
+                            ),
+                        html.P(", UPE campus Caruaru (orientador.", className="about__role-description"),
+                    ], className="about__listitem"),
+                ),
+                html.Li(
+                    html.Div([
+                        html.A(
+                            html.P("Profª. Patrícia Takako Endo", className="about__role-description"),
+                            href='http://lattes.cnpq.br/5055727404635243',
+                            target="_blank",
+                            ),
+                            html.P(" , UPE campus Caruaru (co-orientadora).", className="about__role-description"),
+                    ], className="about__listitem"),
+                )
+        ]),
         ],
         className="home-page-container", ),
 )
