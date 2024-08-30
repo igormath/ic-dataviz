@@ -12,7 +12,8 @@ import flask
 server = flask.Flask(__name__)
 app = dash.Dash(server=server, name="Dashboard", url_base_pathname="/rad/", use_pages=True, pages_folder="")
 
-df = pd.read_csv('df_sem_pendentes_number.csv')
+# df = pd.read_csv('df_sem_pendentes_number.csv')
+df = pd.read_csv('df_selecionado.csv')
 time_series = pd.read_csv('serie_nota_RAD_row_(2017-2022)-sem-NaN.csv')
 
 averageGradePerUnit = df.groupby('UNIDADE')['Nota_RAD'].mean().reset_index()
@@ -32,21 +33,21 @@ unique_unities = sorted(time_series['Unidade'].unique())
 opcoes_checklist = ['Média Geral'] + unique_unities
 
 dash.register_page(
-        "Visão Histórica", 
+        "Visão Histórica",
         path='/',
-        order=0, 
+        order=0,
         layout=html.Main([
 
             dcc.Checklist(
                 options=[{'label': 'Selecionar Todos', 'value': 'Select All'}],
-                value=['Select All'], 
+                value=['Select All'],
                 inline=True,
                 id='select_all',
             ),
 
             dcc.Checklist(
                 options=opcoes_checklist,
-                value=[], 
+                value=[],
                 inline=True,
                 id='unity_timeseries',
             ),
@@ -57,7 +58,7 @@ dash.register_page(
 
             dcc.RadioItems(
             options=opcoes_checklist,
-            value='Média Geral', 
+            value='Média Geral',
             inline=True,
             id='unity_timeseries_boxplot',
             className='visao__radio__checklist'
@@ -78,12 +79,12 @@ dash.register_page(
 radio_items_year_options = sorted(time_series['Ano'].unique())
 
 dash.register_page(
-        "Visão por ano", 
+        "Visão por ano",
         path='/visao-ano',
-        order=1, 
+        order=1,
         layout=html.Main([
-            
-           
+
+
             # dcc.RadioItems(
             #     options=radio_items_year_options,
             #     value=radio_items_year_options[len(radio_items_year_options) - 1],
@@ -102,9 +103,9 @@ dash.register_page(
                             id='year_timeseries',
                         ),
                     dcc.Checklist(
-                        id='only-one', 
+                        id='only-one',
                         options=[{
-                                'label': 'Selecionar todos', 
+                                'label': 'Selecionar todos',
                                 'value': 'Option'
                                 }],
                         value=['Option'],
@@ -128,7 +129,7 @@ dash.register_page(
 
             html.Div(
                 dcc.Graph(id='number_of_teachers_bars'),
-                id='graph-container', 
+                id='graph-container',
                 className="fixed-div",
             ),
 
@@ -151,7 +152,7 @@ dash.register_page(
 # Layout da página principal
 
 dash.register_page(
-        "Sobre", 
+        "Sobre",
         path='/sobre',
         order=2,
         layout=html.Div([
@@ -216,17 +217,17 @@ app.layout = html.Header([
             html.Ul([
                 html.Li(
                     dcc.Link(f"{page0['name']}", href=page0["relative_path"]),
-                    className="nav-link active", 
+                    className="nav-link active",
                     id="li-0",
                 ), #adicionar classname
                 html.Li(
                     dcc.Link(f"{page1['name']}", href=page1["relative_path"]),
-                    className="nav-link", 
+                    className="nav-link",
                     id="li-1",
                 ),
                 html.Li(
                     dcc.Link(f"{page2['name']}", href=page2["relative_path"]),
-                    className="nav-link", 
+                    className="nav-link",
                     id="li-2",
                 ),
         ], className="main-links-list", id="nav-list"),
@@ -255,40 +256,62 @@ def update_active_links(pathname):
 
 @app.callback(
     Output("grouped-boxplot", "figure"),
+    Input("year_timeseries", "value"),
     Input("unity", "value")
 )
 
-def update_output_grouped_boxplot(unity):
+def update_output_grouped_boxplot(year_timeseries, unity):
+    if (year_timeseries < 2019):
+        layout = go.Layout(
+            title=dict(
+                text=f'Dados das dimensões para o ano {year_timeseries} não estão disponíveis.',
+                y=0.5,
+                x=0.5,
+                xanchor='center',
+                yanchor='middle',
+                font=dict(
+                    size=31,
+                    weight='bold',
+                    color='black',
+                ),
+            ),
+            xaxis=dict(visible=False),
+            yaxis=dict(visible=False),
+            plot_bgcolor='#FFF',
+        )
+        return go.Figure(layout=layout)
+
     filtered_df = df[df['UNIDADE'].isin(unity)]
-    filtered_df = filtered_df.sort_values(by='UNIDADE')
-    
+    filtered_timeseries = filtered_df.loc[filtered_df['Ano'] == year_timeseries]
+    filtered_timeseries = filtered_timeseries.sort_values(by='UNIDADE')
+
     data = [
         go.Box(
-            y=filtered_df['Ensino'],
-            x=filtered_df['UNIDADE'],
+            y=filtered_timeseries['Ensino'],
+            x=filtered_timeseries['UNIDADE'],
             name='Ensino',
             marker_color='#F79646'
         ),
         go.Box(
-            y=filtered_df['Pesquisa'],
-            x=filtered_df['UNIDADE'],
+            y=filtered_timeseries['Pesquisa'],
+            x=filtered_timeseries['UNIDADE'],
             name='Pesquisa',
             marker_color='#92D050'
         ),
         go.Box(
-            y=filtered_df['Extensão'],
-            x=filtered_df['UNIDADE'],
+            y=filtered_timeseries['Extensão'],
+            x=filtered_timeseries['UNIDADE'],
             name='Extensão',
             marker_color='#4BACC6'
         ),
         go.Box(
-            y=filtered_df['Gestão'],
-            x=filtered_df['UNIDADE'],
+            y=filtered_timeseries['Gestão'],
+            x=filtered_timeseries['UNIDADE'],
             name='Gestão',
             marker_color='#B65708'
         )
     ]
-    
+
     layout = go.Layout(
         title=dict(
             text='Notas por unidade e dimensão (disponível apenas para o ano 2022)',
@@ -312,12 +335,12 @@ def update_output_grouped_boxplot(unity):
             x=0.22
         ),
     )
-    
+
     figure = go.Figure(data=data, layout=layout)
 
     figure.update_yaxes(
         showgrid=True,
-        gridwidth=1, 
+        gridwidth=1,
         gridcolor='#e6e9f8',
         fixedrange=True,
     )
@@ -339,7 +362,7 @@ def update_checklists(value):
                 'ICB', 'Mata Norte', 'Mata Sul', 'POLI', 'Petrolina', 'Reitoria', 'Salgueiro', 'Serra Talhada']
     else:
         return []
-    
+
 
 # Callback para selecionar todas as opções no gráfico de série temporal
 
@@ -365,7 +388,7 @@ def update_output_strip(unity_timeseries):
                                   'Nota_RAD': average_per_year['Nota_RAD'],
                                   'Unidade': 'Média Geral',
                                   'Ano': average_per_year['Ano']})
-    
+
     # Adiciona este dataframe criado ao dataframe lido do CSV externo
     df_with_average = pd.concat([time_series, general_average_df], ignore_index=True)
 
@@ -375,7 +398,7 @@ def update_output_strip(unity_timeseries):
     media_unidade_ano.columns = ['Unidade', 'Ano', 'Nota_Media']
 
     fig = px.line(media_unidade_ano, x = 'Ano', y = 'Nota_Media', color='Unidade')
-    
+
     fig.update_layout(
         title=dict(
             text='Evolução da nota média por unidade',
@@ -409,14 +432,15 @@ def update_output_strip(unity_timeseries):
     )
 
     fig.update_yaxes(
-        gridwidth=1, 
+        gridwidth=1,
         gridcolor='#e6e9f8',
         fixedrange=True,
+        range=[0, media_unidade_ano['Nota_Media'].max() + 10], # Adicionei um range que fixa o início do eixo y.
     )
 
     fig.update_xaxes(
         fixedrange=True,
-        gridwidth=1, 
+        gridwidth=1,
         gridcolor='#e6e9f8',
     )
 
@@ -449,7 +473,7 @@ def update_output_boxplot(year_timeseries, unity):
                                 showlegend=False,
                                 hoverinfo='y+name'
                             ))
-        
+
     fig.add_trace(go.Scatter(
         x=df_average['Unidade'],
         y=df_average['Nota_RAD'],
@@ -460,7 +484,7 @@ def update_output_boxplot(year_timeseries, unity):
             dash='dash',
         )
     ))
-        
+
     fig.update_layout(
         plot_bgcolor='#FFFFFF',
         title=dict(
@@ -474,7 +498,7 @@ def update_output_boxplot(year_timeseries, unity):
     )
 
     fig.update_yaxes(
-        gridwidth=1, 
+        gridwidth=1,
         gridcolor='#e6e9f8',
         fixedrange=True,
     )
@@ -482,7 +506,7 @@ def update_output_boxplot(year_timeseries, unity):
     fig.update_xaxes(
         fixedrange=True,
     )
-                                
+
     return fig
 
 
@@ -499,7 +523,7 @@ def update_output_boxplot(year_timeseries, unity):
 
 
 #     data = []
-    
+
 #     data.append(go.Box(
 #         x=sorted(filtered_timeseries['Unidade']),
 #         y=filtered_timeseries['Nota_RAD'],
@@ -519,7 +543,7 @@ def update_output_boxplot(year_timeseries, unity):
 #             dash='dash',
 #         )
 #     ))
-    
+
 #     layout = go.Layout(
 #         title=f'Relatório de Atividades Docentes {year_timeseries} - Notas por unidade (Nota geral)',
 #         xaxis=dict(title='Unidade'),
@@ -534,7 +558,7 @@ def update_output_boxplot(year_timeseries, unity):
 #             x=1,
 #         ),
 #     )
-    
+
 #     figure = go.Figure(data=data, layout=layout)
 #     return figure
 
@@ -558,13 +582,13 @@ def update_output_strip(year_timeseries, unity):
         }
 
     figure = px.strip(
-               filtered_df_result, 
-               x='Unidade', 
+               filtered_df_result,
+               x='Unidade',
                y='Nota_RAD',
                color='Cargo',
                color_discrete_map=color_map,
-               orientation='v', 
-               stripmode='overlay', 
+               orientation='v',
+               stripmode='overlay',
             )
 
     figure.update_layout(
@@ -593,7 +617,7 @@ def update_output_strip(year_timeseries, unity):
 
     figure.update_yaxes(
         showgrid=True,
-        gridwidth=1, 
+        gridwidth=1,
         gridcolor='#e6e9f8',
         fixedrange=True,
     )
@@ -613,7 +637,7 @@ def horizontal_bar_chart(year_timeseries):
     filtered_timeseries = time_series.loc[time_series['Ano'] == year_timeseries]
     n_teachers = filtered_timeseries['Unidade'].value_counts().reset_index()
     n_teachers.columns = ['Unidade', 'N_Professores']
-    
+
     figure = go.Figure(go.Bar(
         x = n_teachers['N_Professores'],
         y = n_teachers['Unidade'],
@@ -655,14 +679,14 @@ def horizontal_bar_chart(year_timeseries):
 # )
 
 # def update_output_boxplot(unity_timeseries_boxplot):
-    
+
 #     filtered_timeseries = time_series.loc[time_series['Unidade'] == unity_timeseries_boxplot]
 #     df_average = filtered_timeseries.groupby('Ano')['Nota_RAD'].mean().reset_index()
 #     df_average['Nota_RAD'] = filtered_timeseries['Nota_RAD'].mean()
 
 #     data = []
 
-#     if (unity_timeseries_boxplot == 'Média Geral'):    
+#     if (unity_timeseries_boxplot == 'Média Geral'):
 #         data.append(go.Box(
 #             x=time_series['Ano'],
 #             y=time_series['Nota_RAD'],
@@ -688,7 +712,7 @@ def horizontal_bar_chart(year_timeseries):
 #         name='Nota RAD média',
 #         line=dict(color='black')
 #     ))
-    
+
 #     layout = go.Layout(
 #         title='Relatório de Atividades Docentes - Série por unidade (Nota geral)',
 #         xaxis=dict(title='Unidade'),
@@ -696,7 +720,7 @@ def horizontal_bar_chart(year_timeseries):
 #         boxmode='group',
 #         plot_bgcolor='#FFFFFF',
 #     )
-    
+
 #     figure = go.Figure(data=data, layout=layout)
 #     return figure
 
@@ -706,7 +730,7 @@ def horizontal_bar_chart(year_timeseries):
 )
 
 def update_output_boxplot(unity_timeseries_boxplot):
-    
+
     filtered_timeseries = time_series.loc[time_series['Unidade'] == unity_timeseries_boxplot]
     df_average = filtered_timeseries.groupby('Ano')['Nota_RAD'].mean().reset_index()
     df_average['Nota_RAD'] = filtered_timeseries['Nota_RAD'].mean()
@@ -722,7 +746,7 @@ def update_output_boxplot(unity_timeseries_boxplot):
 
     fig = go.Figure()
 
-    if (unity_timeseries_boxplot == 'Média Geral'):    
+    if (unity_timeseries_boxplot == 'Média Geral'):
         fig.add_trace(go.Violin(
             x=time_series['Ano'],
             y=time_series['Nota_RAD'],
@@ -758,7 +782,7 @@ def update_output_boxplot(unity_timeseries_boxplot):
             name='Nota RAD média',
             line=dict(color='rgb(31, 119, 180)'),
         ))
-    
+
     fig.update_layout(
         title=dict(
             text='Distribuição da nota média por ano',
@@ -776,7 +800,7 @@ def update_output_boxplot(unity_timeseries_boxplot):
 
     fig.update_yaxes(
         showgrid=True,
-        gridwidth=1, 
+        gridwidth=1,
         gridcolor='#e6e9f8',
         fixedrange=True,
     )
@@ -784,7 +808,7 @@ def update_output_boxplot(unity_timeseries_boxplot):
     fig.update_xaxes(
         fixedrange=True,
     )
-    
+
     return fig
 
 # @app.callback(
@@ -801,7 +825,7 @@ def update_output_boxplot(unity_timeseries_boxplot):
 #         filtered_quartiles_dataframe = quartiles_dataframe.groupby('Ano')[['mean', '25%', '75%']].mean().reset_index()
 #     else:
 #         filtered_quartiles_dataframe = quartiles_dataframe.loc[quartiles_dataframe['Unidade'] == unity_timeseries_boxplot]
-    
+
 #     figure = go.Figure([
 #         go.Scatter(
 #             name='Média',
@@ -833,12 +857,11 @@ def update_output_boxplot(unity_timeseries_boxplot):
 #     ])
 
 #     figure.update_layout( xaxis={
-#         'range': [filtered_quartiles_dataframe['Ano'].min(), filtered_quartiles_dataframe['Ano'].max()], 
+#         'range': [filtered_quartiles_dataframe['Ano'].min(), filtered_quartiles_dataframe['Ano'].max()],
 #         'tickvals': [*range(int(filtered_quartiles_dataframe['Ano'].min()), int(filtered_quartiles_dataframe['Ano'].max()))]
 #     })
-    
+
 #     return figure
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=80)
-    
+    app.run(debug=True, host='0.0.0.0', port='8080')
